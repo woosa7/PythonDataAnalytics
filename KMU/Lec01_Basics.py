@@ -66,13 +66,19 @@ for name in os.listdir():
         num = int(m.group(1))                # 1번째 그룹을 정수(integer)로 변환
         new_name = '{:03d}.csv'.format(num)  # 새 파일명
         os.rename(name, new_name)            # 으로 바꾸기
+
 os.listdir()[:10]
 os.remove('002.csv')
 '002.csv' in os.listdir()
 os.chdir('..')
 os.getcwd()
-os.getcwd()
+
+
+# ---------------------------------------------------------
+# 파일 복사, 이동 등 관련 기능 라이브러리
+
 import shutil
+
 zipfile = shutil.make_archive('data', 'zip', 'text')  # text 폴더를 data.zip으로 압축
 shutil.copy(zipfile, 'data2.zip')  # 압축 파일을 data2.zip으로 복사
 shutil.copy2(zipfile, 'data3.zip')  # copy와 같음. 단, 파일의 수정된 날짜를 원본 그대로 유지
