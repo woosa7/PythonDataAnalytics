@@ -73,9 +73,55 @@ print(cars)
 
 
 # --------------------------------------------
-# Case Study: Hacker Statistics
+# Case Study: Hacker Statistics. Normal Distribution
 # --------------------------------------------
 
+import numpy as np
+
+np.random.seed(1234)
+
+print(np.random.rand())             # random float
+
+print(np.random.randint(1, 7))      # random int
 
 
+# Random Walk
+all_walks = []
+for i in range(1000) :
+    random_walk = [0]
+
+    for x in range(100) :
+        # Set step : last element in random_walk
+        step = random_walk[-1]
+
+        # Roll the dice
+        dice = np.random.randint(1,7)
+
+        # Determine next step
+        if dice <= 2:
+            step = max(0, step - 1)     # 음수값 되면 0 리턴
+        elif dice <= 5:
+            step += 1
+        else:
+            step += np.random.randint(1, 7)
+
+        # append next_step to random_walk
+        random_walk.append(step)
+    all_walks.append(random_walk)
+
+# Print
+np_all_walks = np.array(all_walks)
+np_aw_t = np.transpose(np_all_walks)
+print(np_aw_t)
+
+# Plot
+import matplotlib.pyplot as plt
+plt.plot(np_aw_t)
+plt.show()
+
+# select last row - check normal distribution
+ends = np_aw_t[-1]
+print(ends)
+plt.hist(ends)
+plt.show()
 
