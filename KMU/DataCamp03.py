@@ -54,13 +54,15 @@ cars.index = ['US', 'AUS', 'JAP', 'IN', 'RU', 'MOR', 'EG']
 
 print(cars)
 
+
 # data import from csv
 cars = pd.read_csv('cars.csv', index_col = 0)
 
 print(cars)
 
-print(cars["country"])      # output as Pandas Series
+print(cars[1:4])
 
+print(cars["country"])      # output as Pandas Series
 print(cars[["country"]])    # output as Pandas DataFrame
 print(cars[["country", "drives_right"]])
 
@@ -69,19 +71,16 @@ print(cars.loc[['RU', 'AUS']])
 print(cars.iloc[[4, 1]])
 
 print(cars.loc['MOR', 'drives_right'])
-
 print(cars.loc[['RU','MOR'], ['country', 'drives_right']])  # sub-DataFrame
 
+print(cars.loc[:, 'drives_right'])      # Series
+print(cars.loc[:, ['drives_right']])    # DataFrame
+print(cars.loc[:, ['cars_per_cap', 'drives_right']])
 
 
+# Filtering pandas dataframe
+print( cars[cars['drives_right'] == True] )
 
-
-
-
-
-
-
-
-
-
+many_cars = cars["cars_per_cap"] > 500
+print( cars[many_cars] )
 

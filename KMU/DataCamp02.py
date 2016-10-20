@@ -24,6 +24,10 @@ print(bmi[bmi < 21])
 print(np_weight[5])
 print(np_height[20:30])
 
+# Boolean operators with Numpy
+print(np_height[np.logical_and(np_height > 1.7, np_height < 1.8)])
+print(np_height[np.logical_or(np_height > 1.9, np_height < 1.8)])
+
 
 # --------------------------------------------
 # 2D Numpy Array
