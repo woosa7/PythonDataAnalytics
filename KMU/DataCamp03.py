@@ -84,3 +84,50 @@ print( cars[cars['drives_right'] == True] )
 many_cars = cars["cars_per_cap"] > 500
 print( cars[many_cars] )
 
+
+# --------------------------------------------
+# Pandas Grouping
+# --------------------------------------------
+import numpy as np
+
+car = pd.read_csv('automobile.csv')
+
+print(car.shape)
+print(car.head())
+
+car.loc[car.wheels == '4wd']
+
+# symboling : 차량 안전등급 지수
+print( car.loc[car.wheels == '4wd', 'symboling'] )
+
+a1 = car.loc[car.wheels == '4wd', 'symboling'].mean()
+a2 = car.loc[car.wheels == 'fwd', 'symboling'].mean()
+
+print(a1);print(a2)
+
+
+# Grouping
+
+grouped = car.groupby('wheels')
+
+print( grouped.get_group('4wd') )
+
+print( grouped['symboling'].mean() )
+
+
+# aggregation
+
+print( grouped['symboling'].agg([np.mean, np.sum]) )
+print( grouped['symboling'].agg({'평균': np.mean, '합계': np.sum}) )
+
+
+# Ordered Dictionary
+
+from collections import OrderedDict
+
+d = OrderedDict([('평균', np.mean), ('합계', np.sum)])
+print(d)
+print(d['평균'])
+
+grouped['symboling'].agg(OrderedDict([('평균', np.mean), ('합계', np.sum)]))
+
