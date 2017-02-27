@@ -14,3 +14,8 @@ Data Analysis with Python
 * pydata : 파이썬 라이브러리를 활용한 데이터분석
 
 ## 4. Udacity
+
+
+
+
+[import matplotlib error](http://stackoverflow.com/questions/34004063/error-on-import-matplotlib-pyplot-on-anaconda3-for-windows-10-home-64-bit-pc)
