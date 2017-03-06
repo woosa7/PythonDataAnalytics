@@ -1,0 +1,52 @@
+cd c:\Python_DataAnalysis
+---------------------------------------------------------------------------
+DataCamp
+---------------------------------------------------------------------------
+Python
+
+01 Intro to Python for Data Science
+02 Intermediate Python for Data Science
+03 Python Data Science Toolbox (Part 1)
+04 Python Data Science Toolbox (Part 2)
+
+05 pandas Foundations
+06 Manipulating DataFrames with pandas
+07 Merging DataFrames with pandas
+
+08 Statistical Thinking in Python 1
+09 Statistical Thinking in Python 2
+
+---------------------------------------- ing
+
+Supervised Learning with scikit-learn
+Unsupervised Learning in Python
+
+Introduction to Data Visualization with Python
+Interactive Data Visualization with Bokeh
+
+---------------------------------------------------------------------------
+R
+
+Introduction to R
+Intermediate R
+Intermediate R - Practice
+Data Manipulation in R with dplyr
+Joining Data in R with dplyr
+Writing Functions in R
+
+---------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
