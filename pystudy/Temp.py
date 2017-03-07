@@ -25,8 +25,7 @@ print(np.std(versicolor_petal_length))
 
 ------------------------
 # Make a scatter plot
-_ = plt.plot(versicolor_petal_length, versicolor_petal_width,
-             marker='.', linestyle='none')
+_ = plt.plot(versicolor_petal_length, versicolor_petal_width, marker='.', linestyle='none')
 
 # Set margins
 plt.margins(0.02)
