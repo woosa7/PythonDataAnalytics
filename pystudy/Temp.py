@@ -312,8 +312,7 @@ tau = np.mean(nohitter_times)
 inter_nohitter_time = np.random.exponential(tau, 100000)
 
 # Plot the PDF and label axes
-_ = plt.hist(inter_nohitter_time,
-             bins=50, normed=True, histtype='step')
+_ = plt.hist(inter_nohitter_time, bins=50, normed=True, histtype='step')
 _ = plt.xlabel('Games between no-hitters')
 _ = plt.ylabel('PDF')
 
