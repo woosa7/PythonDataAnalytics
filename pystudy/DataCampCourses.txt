@@ -8,17 +8,16 @@ Python
 02 Intermediate Python for Data Science
 03 Python Data Science Toolbox (Part 1)
 04 Python Data Science Toolbox (Part 2)
-
 05 pandas Foundations
 06 Manipulating DataFrames with pandas
 07 Merging DataFrames with pandas
-
 08 Statistical Thinking in Python 1
 09 Statistical Thinking in Python 2
 
+10 Supervised Learning with scikit-learn
+
 ---------------------------------------- ing
 
-Supervised Learning with scikit-learn
 Unsupervised Learning in Python
 
 Introduction to Data Visualization with Python
