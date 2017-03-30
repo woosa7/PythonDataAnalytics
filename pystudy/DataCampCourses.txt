@@ -16,9 +16,10 @@ Python
 08 Statistical Thinking in Python 1
 09 Statistical Thinking in Python 2
 
+10 Importing Data in Python (Part 1)
+
 ---------------------------------------- ing
 
-10 Importing Data in Python (Part 1)
 11 Importing Data in Python (Part 2)
 12 Cleaning Data in Python
 
