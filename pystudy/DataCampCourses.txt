@@ -18,10 +18,9 @@ Python
 
 10 Importing Data in Python (Part 1)
 11 Importing Data in Python (Part 2)
+12 Cleaning Data in Python
 
 ---------------------------------------- ing
-
-12 Cleaning Data in Python
 
 13 Introduction to Databases in Python
 14 Introduction to Data Visualization with Python

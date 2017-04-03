@@ -1,12 +1,9 @@
-2. Tidying data
 3. Combining data
 4. Cleaning data
 5. Case study
 
 -----------------------------------------------------------
 Cleaning Data
------------------------------------------------------------
-1. Exploring data
 -----------------------------------------------------------
 Common data problems
 
@@ -19,26 +16,61 @@ Common data problems
 * Column types can signal unexpected data values
 
 -----------------------------------------------------------
+1. Exploring data
+-----------------------------------------------------------
+df.info()
+
+# numerical data
+df.describe()
+
+# categorical data
+df['colname'].value_counts(dropna=False)
+
+-----------------------------------------------------------
+Visual exploratory data analysis
+
+
+import matplotlib.pyplot as plt
+
+# single variables
+df['Existing Zoning Sqft'].describe()
+# 최소값과 최대값 사이의 큰 차이 -- log scale로 조정
+df['Existing Zoning Sqft'].plot(kind='hist', rot=70, logx=True, logy=True)
+plt.show()
+
+# multiple variables
+
+# boxplot
+df.boxplot(column='initial_cost', by='Borough', rot=90)
+plt.show()
+
+# scatter plot
+df.plot(kind='scatter', x='initial_cost', y='total_est_fee', rot=70)
+plt.show()
 
 
 
 -----------------------------------------------------------
+2. Tidying data
+-----------------------------------------------------------
+Principles of tidy data (melting)
 
-
+* column - separate variables
+* row - individual observations
 
 -----------------------------------------------------------
+Reshaping data using melt
 
 
+airquality_melt = pd.melt(airquality, id_vars=['Month', 'Day'])
 
------------------------------------------------------------
-
-
-
------------------------------------------------------------
-
-
+# variable, value 컬럼명 변경
+airquality_melt = pd.melt(airquality, id_vars=['Month', 'Day'], var_name='measurement', value_name='reading')
 
 -----------------------------------------------------------
+Pivot : un-melting
+
+airquality_pivot = airquality_melt.pivot_table(index=['Month', 'Day'], columns='measurement', values='reading')
 
 
 
