@@ -15,13 +15,14 @@ pwd = 'finda888'
 
 
 def get_krx_stock_master():
+    '''거래소(KRX) 상장회사목록 가져오기'''
     # STEP 01: Generate OTP
     gen_otp_url = 'http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx'
     gen_otp_data = {
         'name':'fileDown',
-        'filetype':'xls',
+        'filetype':'xls',       # excel file
         'url':'MKD/04/0406/04060100/mkd04060100_01',
-        'market_gubun':'ALL', # ''ALL':전체, STK': 코스피
+        'market_gubun':'ALL',   # ALL:전체
         'isu_cdnm':'전체',
         'sort_type':'A',
         'std_ind_cd':'01',
@@ -43,9 +44,9 @@ def get_krx_stock_master():
     r = requests.post(down_url, down_data)
     f = io.BytesIO(r.content)
     
-    usecols = ['종목코드', '기업명', '업종코드', '업종', '대표전화', '주소']
+    usecols = ['종목코드', '기업명', '업종코드', '업종']
     df = pd.read_excel(f, converters={'종목코드': str, '업종코드': str}, usecols=usecols)
-    df.columns = ['code', 'name', 'sector_code', 'sector', 'telephone', 'address']
+    df.columns = ['code', 'name', 'sector_code', 'sector']
     return df
 
 
@@ -76,8 +77,7 @@ if __name__ == "__main__":
     # engine.execute(create_table_sql)
 
     # get all stock codes and insert it
-    df = get_krx_stock_master()
-    df_master = df[['code', 'name', 'sector_code', 'sector']]
+    df_master = get_krx_stock_master()
     for ix, r in df_master.iterrows():
         engine.execute(insert_update_sql, (r['code'], r['name'], r['sector_code'], r['sector']))
         print(r['code'], r['name'])
