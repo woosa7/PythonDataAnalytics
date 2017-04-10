@@ -126,7 +126,7 @@ if __name__ == "__main__":
     last_datetime = result_list[0][0]
 
     if last_datetime is None:
-        last_datetime = datetime(2017, 4, 7)
+        last_datetime = datetime(2000, 1, 1)
     today = datetime.today()
     delta = today - last_datetime
 
