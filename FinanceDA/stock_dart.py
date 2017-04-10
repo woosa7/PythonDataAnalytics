@@ -23,6 +23,7 @@ def mkdir_sure(filename):
         
         
 def wget(url, to=None):
+    '''날짜별 공시리스트 html을 로컬 파일로 저장'''
     headers = {'Cookie':'DSAC001_MAXRESULTS=10000;'}
     local_filename = url.split('/')[-1]
     if to:
@@ -36,10 +37,11 @@ def wget(url, to=None):
     return local_filename
     
     
-def find_between( s, first, last ):
+def find_between(s, first, last):
+    '''저장한 공시리스트 html에 오류가 있는지 확인'''
     try:
-        start = s.rfind( first ) + len( first )
-        end = s.index( last, start )
+        start = s.rfind(first) + len(first)
+        end = s.index(last, start)
         return s[start:end]
     except ValueError:
         return ''
@@ -91,7 +93,7 @@ def dart_html_to_db(fn, last_datetime, con):
             if date > last_datetime:
                 con.execute(insert_sql, (doc_id, date, corp_name, market, title, link, reporter))
                 insert_counts += 1
-                print ("%s %s, '%s'" % (date, corp_name, title))
+                print("%s %s, '%s'" % (date, corp_name, title))
     return insert_counts
     
 if __name__ == "__main__":
@@ -124,18 +126,17 @@ if __name__ == "__main__":
     last_datetime = result_list[0][0]
 
     if last_datetime is None:
-        last_datetime = datetime(2000, 1, 1)
+        last_datetime = datetime(2017, 4, 7)
     today = datetime.today()
-    d = last_datetime
-    delta = today - datetime(d.year, d.month, d.day)
+    delta = today - last_datetime
 
     url_tmpl = 'http://dart.fss.or.kr/dsac001/search.ax?selectDate=%s'
 
     for i in range(delta.days + 1):
         d = last_datetime + timedelta(days=i)
-        fn = "DART-%s.html" % d.strftime("%Y-%m-%d")
-        wget(url_tmpl % d.strftime('%Y.%m.%d') , fn)
-        n = dart_html_to_db(fn, last_datetime, con)
+        fn = "DART-%s.html" % d.strftime("%Y%m%d")
+        wget(url_tmpl % d.strftime('%Y%m%d'), fn)    # html을 로컬 파일로 저장
+        n = dart_html_to_db(fn, last_datetime, con)  # 로컬 파일 데이터로 DB insert
         os.remove(fn)
         print (fn, n)
     
