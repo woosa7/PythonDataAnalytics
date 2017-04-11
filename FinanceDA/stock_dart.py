@@ -47,7 +47,7 @@ def find_between(s, first, last):
         return ''
         
 
-def dart_html_to_db(fn, last_datetime, con):
+def dart_html_to_db(fn, last_datetime, reqdate, con):
     '''
     * fn: HTML 파일명
     * last_datetime: 최종 저장된 리포트의 시간
@@ -74,26 +74,26 @@ def dart_html_to_db(fn, last_datetime, con):
         for tr in trs[1:]:
             tds = tr.findAll('td')
             time = tds[0].text.strip()
-            corp_name = tds[1].text.strip()
-            market = tds[1].img['alt']
-            title = " ".join(tds[2].text.split())
-            link = 'http://dart.fss.or.kr' + tds[2].a['href']
-            reporter = tds[3].text.strip()
+            corp_name = tds[1].text.strip()                     # 공시대상회사
+            market = tds[1].img['alt']                          # 시장구분
+            title = " ".join(tds[2].text.split())               # 제목
+            link = 'http://dart.fss.or.kr' + tds[2].a['href']   # 링크
+            reporter = tds[3].text.strip()                      # 제출자
             date = tds[4].text.strip().replace('.', '-')
-            date += ' ' + time
-            doc_id = link.split('main.do?rcpNo=')[1]
+            date += ' ' + time                                  # 접수일
+            doc_id = link.split('main.do?rcpNo=')[1]            # 공시번호
             
             date = datetime.strptime(date, '%Y-%m-%d %H:%M')
             last_datetime
             
             insert_sql = '''insert into stock_dart 
-                (doc_id, date, corp_name, market, title, link, reporter)
-                values (%s,%s,%s,%s,%s,%s,%s)
+                (doc_id, date, corp_name, market, title, link, reporter, postdate)
+                values (%s,%s,%s,%s,%s,%s,%s,%s)
             '''
-            if date > last_datetime:
-                con.execute(insert_sql, (doc_id, date, corp_name, market, title, link, reporter))
-                insert_counts += 1
-                print("%s %s, '%s'" % (date, corp_name, title))
+            #if date > last_datetime:
+            con.execute(insert_sql, (doc_id, date, corp_name, market, title, link, reporter, reqdate))
+            insert_counts += 1
+            print("%s %s, '%s'" % (reqdate, corp_name, title))
     return insert_counts
     
 if __name__ == "__main__":
@@ -103,6 +103,7 @@ if __name__ == "__main__":
     # create table if not exists stock_dart (
     #     `doc_id` varchar(25) not null unique,
     #     `date` datetime,
+    #     `postdate` datetime,      # 접수일과 공시날짜가 다른 것이 많기 때문에 공시일 기준 request.
     #     `corp_name` varchar(50),
     #     `market` varchar(50),
     #     `title` varchar(255),
@@ -118,26 +119,27 @@ if __name__ == "__main__":
     # create table if not exists
     # con.execute(create_table_sql)
 
-    # DB의 마지막 저장일 구하기
+    # DB의 마지막 저장일(공시일자) 구하기
     last_datetime = None
-    sql = "select max(date) as maxdate from stock_dart"
+    sql = "select max(postdate) as maxdate from stock_dart"
     result = con.execute(sql)
     result_list = result.fetchall()
     last_datetime = result_list[0][0]
 
     if last_datetime is None:
-        last_datetime = datetime(2000, 1, 1)
+        last_datetime = datetime(2004, 1, 1)
     today = datetime.today()
     delta = today - last_datetime
 
     url_tmpl = 'http://dart.fss.or.kr/dsac001/search.ax?selectDate=%s'
 
     for i in range(delta.days + 1):
-        d = last_datetime + timedelta(days=i)
-        fn = "DART-%s.html" % d.strftime("%Y%m%d")
-        wget(url_tmpl % d.strftime('%Y%m%d'), fn)    # html을 로컬 파일로 저장
-        n = dart_html_to_db(fn, last_datetime, con)  # 로컬 파일 데이터로 DB insert
+        reqdate = last_datetime + timedelta(days=i+1)
+        print(reqdate)
+        fn = "DART-%s.html" % reqdate.strftime("%Y%m%d")
+        wget(url_tmpl % reqdate.strftime('%Y%m%d'), fn)    # html을 로컬 파일로 저장
+        n = dart_html_to_db(fn, last_datetime, reqdate, con)  # 로컬 파일 데이터로 DB insert
         os.remove(fn)
-        print (fn, n)
+        print(fn, n)
     
     con.close()
