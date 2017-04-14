@@ -85,11 +85,20 @@ def dart_html_to_db(fn, last_datetime, reqdate, con):
             
             date = datetime.strptime(date, '%Y-%m-%d %H:%M')
             last_datetime
-            
-            insert_sql = '''insert into stock_dart 
+
+            insert_sql = '''insert into stock_dart
                 (doc_id, date, corp_name, market, title, link, reporter, postdate)
                 values (%s,%s,%s,%s,%s,%s,%s,%s)
+                on duplicate key update
+                    doc_id = values(doc_id),
+                    date = values(date),
+                    postdate = values(postdate)
             '''
+            # insert_sql = '''insert into stock_dart
+            #     (doc_id, date, corp_name, market, title, link, reporter, postdate)
+            #     values (%s,%s,%s,%s,%s,%s,%s,%s)
+            # '''
+
             #if date > last_datetime:
             con.execute(insert_sql, (doc_id, date, corp_name, market, title, link, reporter, reqdate))
             insert_counts += 1
