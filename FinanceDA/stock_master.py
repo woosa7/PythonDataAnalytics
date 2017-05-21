@@ -3,6 +3,7 @@
 
 # stock_master.py
 # findb 데이터베이스, stock_master 테이블
+# 04_1. 거래소(KRX) 상장회사목록 가져오기
 
 import io
 import requests
