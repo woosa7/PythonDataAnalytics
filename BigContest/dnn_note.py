@@ -42,15 +42,14 @@ model.add(Dense(32, activation='relu', input_shape=(n_cols,)))
 model.add(Dense(2, activation='softmax'))
 model.compile(optimizer='sgd', loss='categorical_crossentropy', metrics=['accuracy'])
 model.fit(predictors, target)
+
 predictions = model.predict(pred_data)
-# Calculate predicted probability of survival: predicted_prob_true
 predicted_prob_true = predictions[:,1]
 
 # ----------------------------------------------
 from keras.optimizers import SGD
 my_optimizer = SGD(lr=lr)
 model.compile(optimizer=my_optimizer, loss='categorical_crossentropy', metrics=['accuracy'])
-
 model.fit(predictors, target, validation_split=0.3)
 
 # ----------------------------------------------
@@ -70,6 +69,119 @@ plt.plot(model_1_training.history['val_loss'], 'r', model_2_training.history['va
 plt.xlabel('Epochs')
 plt.ylabel('loss')
 plt.show()
+
+# ----------------------------------------------------------------------------
+neighbors = np.arange(1, 9)
+train_accuracy = np.empty(len(neighbors))
+test_accuracy = np.empty(len(neighbors))
+
+for i, k in enumerate(neighbors):
+    knn = KNeighborsClassifier(n_neighbors=k)
+    knn.fit(X_train, y_train)
+    train_accuracy[i] = knn.score(X_train, y_train)
+    test_accuracy[i] = knn.score(X_test, y_test)
+
+# Generate plot
+plt.title('k-NN: Varying Number of Neighbors')
+plt.plot(neighbors, test_accuracy, label = 'Testing Accuracy')
+plt.plot(neighbors, train_accuracy, label = 'Training Accuracy')
+plt.legend()
+plt.xlabel('Number of Neighbors')
+
+# ----------------------------------------------------------------------------
+# cross-validation
+from sklearn.model_selection import cross_val_score
+reg = LinearRegression()
+# Compute 5-fold cross-validation scores
+cv_scores = cross_val_score(reg, X, y, cv=5)
+print(cv_scores)
+
+# ----------------------------------------------------------------------------
+# Regularization 1
+
+from sklearn.linear_model import Lasso
+lasso = Lasso(alpha=0.4, normalize=True)
+lasso.fit(X, y)
+
+# Compute and print the coefficients
+lasso_coef = lasso.coef_
+print(lasso_coef)
+
+# Plot the coefficients
+plt.plot(range(len(df_columns)), lasso_coef)
+plt.xticks(range(len(df_columns)), df_columns.values, rotation=60)
+plt.margins(0.02)
+plt.show()
+
+# ----------------------------------------------------------------------------
+# Regularization 2
+
+# Lasso is great for feature selection, but when building regression models, Ridge regression should be your first choice.
+
+from sklearn.linear_model import Ridge
+from sklearn.model_selection import cross_val_score
+
+alpha_space = np.logspace(-4, 0, 50)
+ridge_scores = []
+ridge_scores_std = []
+
+ridge = Ridge(normalize=True)
+for alpha in alpha_space:
+    ridge.alpha = alpha
+    ridge_cv_scores = cross_val_score(ridge, X, y, cv=10)
+    ridge_scores.append(np.mean(ridge_cv_scores))
+    ridge_scores_std.append(np.std(ridge_cv_scores))
+
+# Display the plot
+display_plot(ridge_scores, ridge_scores_std)
+
+def display_plot(cv_scores, cv_scores_std):
+    fig = plt.figure()
+    ax = fig.add_subplot(1,1,1)
+    ax.plot(alpha_space, cv_scores)
+
+    std_error = cv_scores_std / np.sqrt(10)
+
+    ax.fill_between(alpha_space, cv_scores + std_error, cv_scores - std_error, alpha=0.2)
+    ax.set_ylabel('CV Score +/- Std Error')
+    ax.set_xlabel('Alpha')
+    ax.axhline(np.max(cv_scores), linestyle='--', color='.5')
+    ax.set_xlim([alpha_space[0], alpha_space[-1]])
+    ax.set_xscale('log')
+    plt.show()
+
+# ----------------------------------------------------------------------------
+from sklearn.metrics import confusion_matrix, classification_report
+
+print(confusion_matrix(y_test, y_pred))
+print(classification_report(y_test, y_pred))
+
+# ----------------------------------------------------------------------------
+from sklearn.metrics import roc_curve
+
+# Compute predicted probabilities
+y_pred_prob = logreg.predict_proba(X_test)[:,1]
+# Generate ROC curve values: fpr, tpr, thresholds
+fpr, tpr, thresholds = roc_curve(y_test, y_pred_prob)
+# Plot ROC curve
+plt.plot([0, 1], [0, 1], 'k--')
+plt.plot(fpr, tpr)
+plt.xlabel('False Positive Rate')
+plt.ylabel('True Positive Rate')
+plt.title('ROC Curve')
+plt.show()
+
+# ----------------------------------------------------------------------------
+
+
+# ----------------------------------------------------------------------------
+
+
+
+# ----------------------------------------------------------------------------
+
+
+# ----------------------------------------------------------------------------
 
 
 
