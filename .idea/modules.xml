@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/PythonDataAnalytics.iml" filepath="$PROJECT_DIR$/.idea/PythonDataAnalytics.iml" />
-      <module fileurl="file://C:/woosa7/github/PythonDataAnalytics/.idea/PythonDataAnalytics.iml" filepath="C:/woosa7/github/PythonDataAnalytics/.idea/PythonDataAnalytics.iml" />
     </modules>
   </component>
 </project>
