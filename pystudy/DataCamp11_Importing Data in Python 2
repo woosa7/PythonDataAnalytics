@@ -1,0 +1,151 @@
+-----------------------------------------------------------
+Importing Data in Python 2
+-----------------------------------------------------------
+1. Importing data from the Internet
+-----------------------------------------------------------
+HTTP requests - requests
+
+
+# Import package
+import requests
+
+# Specify the url
+url = "http://www.datacamp.com/teach/documentation"
+
+# Packages the request, send the request and catch the response
+r = requests.get(url)
+
+# Extract the response
+text = r.text
+
+# Print the html
+print(text)
+
+-----------------------------------------------------------
+Parsing HTML with BeautifulSoup
+
+
+# Import packages
+import requests
+from bs4 import BeautifulSoup
+
+# Specify url
+url = 'https://www.python.org/~guido/'
+
+# Package the request, send the request and catch the response
+r = requests.get(url)
+
+# Extracts the response as html
+html_doc = r.text
+
+# Create a BeautifulSoup object from the HTML
+soup = BeautifulSoup(html_doc)
+
+# Prettify the BeautifulSoup object
+pretty_soup = soup.prettify()
+
+# Print the response
+print(pretty_soup)
+
+-----------------------------------------------------------
+Turning a webpage into data - getting the text
+
+
+import requests
+from bs4 import BeautifulSoup
+
+url = 'https://www.python.org/~guido/'
+
+r = requests.get(url)
+
+html_doc = r.text
+
+# Create a BeautifulSoup object from the HTML
+soup = BeautifulSoup(html_doc)
+
+# Get the title of Guido's webpage
+guido_title = soup.title
+print(guido_title)
+
+# Get Guido's text
+guido_text = soup.get_text()
+print(guido_text)
+
+-----------------------------------------------------------
+getting the hyperlinks
+
+
+import requests
+from bs4 import BeautifulSoup
+
+url = 'https://www.python.org/~guido/'
+r = requests.get(url)
+
+html_doc = r.text
+
+# create a BeautifulSoup object from the HTML
+soup = BeautifulSoup(html_doc)
+print(soup.title)
+
+# Find all 'a' tags (which define hyperlinks)
+a_tags = soup.find_all('a')
+
+# Print the URLs to the shell
+for link in a_tags:
+    print(link.get('href'))
+
+
+
+-----------------------------------------------------------
+2. Interacting with APIs to import data from the web
+-----------------------------------------------------------
+Loading and exploring a JSON
+
+
+# Load JSON
+with open("a_movie.json") as json_file:
+    json_data = json.load(json_file)    # dictionary
+
+# Print each key-value pair in json_data
+for k in json_data.keys():
+    print(k + ': ', json_data[k])
+
+-----------------------------------------------------------
+API requests
+
+
+# pull some movie data down from the Open Movie Database (OMDB) using their API
+
+import requests
+
+url = 'http://www.omdbapi.com/?t=social+network'
+r = requests.get(url)
+
+print(r.text)
+
+# Decode the JSON data into a dictionary
+json_data = r.json()
+
+# Print each key-value pair in json_data
+for k in json_data.keys():
+    print(k + ': ', json_data[k])
+
+-----------------------------------------------------------
+Wikipedia API
+
+
+import requests
+
+url = 'https://en.wikipedia.org/w/api.php?action=query&prop=extracts&format=json&exintro=&titles=pizza'
+r = requests.get(url)
+
+# Decode the JSON data into a dictionary
+json_data = r.json()
+
+# Print the Wikipedia page extract
+pizza_extract = json_data['query']['pages']['24768']['extract']
+print(pizza_extract)
+
+-----------------------------------------------------------
+END
+-----------------------------------------------------------

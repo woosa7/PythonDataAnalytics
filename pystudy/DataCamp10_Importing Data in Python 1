@@ -1,115 +1,6 @@
 -----------------------------------------------------------
 Importing Data in Python 1
 -----------------------------------------------------------
-1. Introduction and flat files
------------------------------------------------------------
-Importing text file
-
-
-file = open('moby_dick.txt', mode='r')
-
-print(file.read())
-
-file.close()
-
------------------------------------------------------------
-Importing text files line by line
-
-
-with open('moby_dick.txt') as file:
-    print(file.readline())
-    print(file.readline())
-    print(file.readline())
-
------------------------------------------------------------
-Import flat files as Numpy array
-
-
-# MNIST digit recognition dataset
-
-import numpy as np
-
-file = 'digits.csv'
-
-digits = np.loadtxt(file, delimiter=',')   # Load file as array
-digits
-
-# data = np.loadtxt(file, delimiter='\t', dtype=str)   # 탭 구분, 문자열
-
-# data_float = np.loadtxt(file, delimiter='\t', dtype='float', skiprows=1)   # 데이터 타입 지정, 1번째 줄 제외
-
-# data = pd.read_csv(file, header=None, nrows=5)   # using pandas
-
-digits.shape
-
-print(type(digits))
-
-# reshape a row
-im = digits[21, 1:]
-im_sq = np.reshape(im, (28, 28))   # 28 * 28 format
-
-# Plot reshaped data
-plt.imshow(im_sq, cmap='Greys', interpolation='nearest')
-plt.show()
-
------------------------------------------------------------
-pandas 를 이용해 txt 파일 읽는 경우
-
-
-* 탭 구분, '#'으로 표시된 주석 포함한 문서
-
-file = 'titanic_corrupt.txt'
-data = pd.read_csv(file, sep='\t', comment='#', na_values=['Nothing'])
-
-
-
------------------------------------------------------------
-2. Importing data from other file types
------------------------------------------------------------
-Listing sheets of Excel spreadsheets
-
-
-# Import pandas
-import pandas as pd
-
-# Assign spreadsheet filename: file
-file = 'battledeath.xlsx'
-
-# Load spreadsheet: xl
-xl = pd.ExcelFile(file)
-
-# Print sheet names
-print(xl.sheet_names)
-
------------------------------------------------------------
-Importing sheets of Excel spreadsheets
-
-
-# Load a sheet into a DataFrame by name: df1
-df1 = xl.parse('2004')
-
-# Print the head of the DataFrame df1
-print(df1.head())
-
-# Load a sheet into a DataFrame by index: df2
-df2 = xl.parse(0)
-
-# Print the head of the DataFrame df2
-print(df2.head())
-
------------------------------------------------------------
-Customizing your spreadsheet import
-
-
-# Parse the first sheet and rename the columns: df1
-df1 = xl.parse(0, skiprows=1, names=['Country','AAM due to War (2002)'])
-
-print(df1.head())
-
-# Parse the first column of the second sheet and rename the column: df2
-df2 = xl.parse(1, parse_cols=0, skiprows=1, names=['Country'])
-
-print(df2.head())
 
 -----------------------------------------------------------
 Importing SAS files using pandas
@@ -211,12 +102,12 @@ plt.ylabel('normalized fluorescence (measure of expression)')
 plt.show()
 
 
-
------------------------------------------------------------
+===========================================================
 3. Working with relational databases in Python
+===========================================================
+
 -----------------------------------------------------------
 Creating a database engine
-
 
 # Import necessary module
 from sqlalchemy import create_engine
@@ -226,7 +117,6 @@ engine = create_engine('sqlite:///Chinook.sqlite')
 
 -----------------------------------------------------------
 What are the tables in the database?
-
 
 # Import necessary module
 from sqlalchemy import create_engine
@@ -240,7 +130,6 @@ print(table_names)
 
 -----------------------------------------------------------
 SQL Queries
-
 
 # Import packages
 from sqlalchemy import create_engine
@@ -264,7 +153,6 @@ con.close()
 -----------------------------------------------------------
 Customizing the SQL Queries
 
-
 # Open engine in context manager
 # Perform query and save results to DataFrame: df
 with engine.connect() as con:
@@ -277,7 +165,6 @@ print(df.head())
 
 -----------------------------------------------------------
 Filtering
-
 
 # Create engine: engine
 engine = create_engine('sqlite:///Chinook.sqlite')
@@ -294,7 +181,6 @@ print(df.head())
 -----------------------------------------------------------
 Ordering
 
-
 # Create engine: engine
 engine = create_engine('sqlite:///Chinook.sqlite')
 
@@ -309,7 +195,6 @@ print(df.head())
 
 -----------------------------------------------------------
 Pandas and SQL Queries
-
 
 # Import packages
 from sqlalchemy import create_engine
@@ -336,7 +221,6 @@ print(df.equals(df1))
 -----------------------------------------------------------
 Pandas for more complex querying
 
-
 # Import packages
 from sqlalchemy import create_engine
 import pandas as pd
@@ -355,7 +239,6 @@ print(df.head())
 -----------------------------------------------------------
 INNER JOIN
 
-
 # Open engine in context manager
 # Perform query and save results to DataFrame: df
 with engine.connect() as con:
@@ -369,13 +252,13 @@ print(df.head())
 -----------------------------------------------------------
 Filtering your INNER JOIN
 
-
 # Execute query and store records in DataFrame: df
 df = pd.read_sql_query("SELECT * FROM PlaylistTrack INNER JOIN Track on PlaylistTrack.TrackId = Track.TrackId WHERE Milliseconds < 250000",
     engine
 )
 
 print(df.head())
+
 
 -----------------------------------------------------------
 END
