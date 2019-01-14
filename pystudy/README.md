@@ -15,13 +15,13 @@
 
 07. Merging DataFrames - index, sort, concatenate, merge
 
-08. Statistical Thinking 1
+08. Statistical Thinking 1 - Transform dataset, swarmplot, ECDF, boxplot, Probability & distribution
 
-09. Statistical Thinking 2
+09. Statistical Thinking 2 - Parameter estimation, Bootstrap confidence intervals, Hypothesis testing, A/B Test
 
-10. Importing Data 1
+10. Importing Data 1 - flat file, excel, RDB
 
-11. Importing Data 2
+11. Importing Data 2 - web archive, HTTP requests, BeautifulSoup, json, twitter
 
 
 ```
