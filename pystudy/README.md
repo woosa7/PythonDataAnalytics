@@ -23,5 +23,6 @@
 
 11. Importing Data 2 - web archive, HTTP requests, BeautifulSoup, json, twitter
 
+12. Cleaning Data - info, describe, value_counts, melt, pivot_table, convert datatype, regular expressions
 
 ```
