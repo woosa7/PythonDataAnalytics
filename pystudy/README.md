@@ -1,7 +1,7 @@
 # DataCamp
 
 ```
-01. Introduction to Python - List, Numpy array, simple plot
+01. Intro to Python - List, Numpy array, simple plot
 
 02. Intermediate Python - Dictionary, pandas, df grouping & agg, Loop 
 
@@ -24,5 +24,9 @@
 11. Importing Data 2 - web archive, HTTP requests, BeautifulSoup, json, twitter
 
 12. Cleaning Data - info, describe, value_counts, melt, pivot_table, convert datatype, regular expressions
+
+13. Data Types - Tuple, Set, Dictionary, DictReader, collections (Counter, defaultdict, OrderedDict), DateTimes
+
+14. Preprocess for ML - Stratified sampling, Feature engineering, feature extract (re 정규표현식)
 
 ```
