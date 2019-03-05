@@ -5,7 +5,7 @@
 
 02. Intermediate Python - Dictionary, pandas, df grouping & agg, Loop (list, dictionary, Dataframe)
 
-03. Python Toolbox 1 - Function, *args, **kwargs, Lambda function, Error handling
+03. Python Toolbox 1 - Function, *args, **kwargs, Lambda function (map, filter, reduce), Error handling
 
 04. Python Toolbox 2 - iterator, enumerate, zip, List comprehensions, Generator (Lazy evaluation)
 
