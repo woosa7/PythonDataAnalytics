@@ -9,7 +9,7 @@
 
 04. Python Toolbox 2 - iterator, enumerate, zip, List comprehensions, Generator (Lazy evaluation)
 
-05. pandas - Data import & export, plot, time series
+05. pandas - Data import & export, plot, time series, average smoothed plot (!)
 
 06. Manipulating DataFrames - indexing & slicing, filtering, transform (apply, map), grouping, detact outliers
 
