@@ -38,15 +38,15 @@ print((end - start).days)
 # Counting events per calendar month
 
 # A dictionary to count hurricanes per calendar month
-hurricanes_each_month = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6:0,
-		  				 7: 0, 8:0, 9:0, 10:0, 11:0, 12:0}
+hurricanes_each_month = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0,
+                         7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0}
 
 # Loop over all hurricanes
 for hurricane in florida_hurricane_dates:
-  # Pull out the month
-  month = hurricane.month
-  # Increment the count in your dictionary by one
-  hurricanes_each_month[month] += 1
+    # Pull out the month
+    month = hurricane.month
+    # Increment the count in your dictionary by one
+    hurricanes_each_month[month] += 1
 
 print(hurricanes_each_month)
 
@@ -110,13 +110,13 @@ trip_counts = {'AM': 0, 'PM': 0}
 
 # Loop over all trips
 for trip in onebike_datetimes:
-  # Check to see if the trip starts before noon
-  if trip['start'].hour < 12:
-    # Increment the counter for before noon
-    trip_counts['AM'] += 1
-  else:
-    # Increment the counter for after noon
-    trip_counts['PM'] += 1
+    # Check to see if the trip starts before noon
+    if trip['start'].hour < 12:
+        # Increment the counter for before noon
+        trip_counts['AM'] += 1
+    else:
+        # Increment the counter for after noon
+        trip_counts['PM'] += 1
 
 print(trip_counts)
 
@@ -149,11 +149,11 @@ onebike_datetimes = []
 
 # Loop over all trips
 for (start, end) in onebike_datetime_strings:
-  trip = {'start': datetime.strptime(start, fmt),
-          'end': datetime.strptime(end, fmt)}
+    trip = {'start': datetime.strptime(start, fmt),
+            'end': datetime.strptime(end, fmt)}
 
-  # Append the trip
-  onebike_datetimes.append(trip)
+    # Append the trip
+    onebike_datetimes.append(trip)
 
 # -------------------------------------------
 # Recreating ISO format with strftime()
@@ -184,7 +184,7 @@ dts = []
 
 # Loop
 for ts in timestamps:
-  dts.append(datetime.fromtimestamp(ts))
+    dts.append(datetime.fromtimestamp(ts))
 
 print(dts)
 
@@ -197,14 +197,14 @@ print(onebike_datetimes[0])
 onebike_durations = []
 
 for trip in onebike_datetimes:
-  # Create a timedelta object corresponding to the length of the trip
-  trip_duration = trip['end'] - trip['start']
+    # Create a timedelta object corresponding to the length of the trip
+    trip_duration = trip['end'] - trip['start']
 
-  # Get the total elapsed seconds in trip_duration
-  trip_length_seconds = trip_duration.total_seconds()
+    # Get the total elapsed seconds in trip_duration
+    trip_length_seconds = trip_duration.total_seconds()
 
-  # Append the results to our list
-  onebike_durations.append(trip_length_seconds)
+    # Append the results to our list
+    onebike_durations.append(trip_length_seconds)
 
 # -------------------------------------------
 # Average trip time
@@ -239,7 +239,6 @@ UTC = timezone(timedelta(hours=0))
 dt = datetime(2017, 10, 1, 15, 26, 26, tzinfo=UTC)
 print(dt.isoformat())
 
-
 # Create a timezone for Pacific Standard Time, or UTC-8
 pst = timezone(timedelta(hours=-8))
 # October 1, 2017 at 15:26:26, UTC-8
@@ -254,20 +253,20 @@ edt = timezone(timedelta(hours=-4))
 
 # Loop over trips, updating the start and end datetimes to be in UTC-4
 for trip in onebike_datetimes[:10]:
-  # Update trip['start'] and trip['end']
-  trip['start'] = trip['start'].replace(tzinfo=edt)
-  trip['end'] = trip['end'].replace(tzinfo=edt)
+    # Update trip['start'] and trip['end']
+    trip['start'] = trip['start'].replace(tzinfo=edt)
+    trip['end'] = trip['end'].replace(tzinfo=edt)
 
 # -------------------------------------------
 # What time did the bike leave in UTC?
 
 # Loop over the trips
 for trip in onebike_datetimes[:10]:
-  # Pull out the start and set it to UTC
-  dt = trip['start'].astimezone(timezone.utc)
+    # Pull out the start and set it to UTC
+    dt = trip['start'].astimezone(timezone.utc)
 
-  # Print the start time in UTC
-  print('Original:', trip['start'], '| UTC:', dt.isoformat())
+    # Print the start time in UTC
+    print('Original:', trip['start'], '| UTC:', dt.isoformat())
 
 # -------------------------------------------
 # Putting the bike trips into the right time zone
@@ -280,9 +279,9 @@ et = tz.gettz('America/New_York')
 
 # Loop over trips, updating the datetimes to be in Eastern Time
 for trip in onebike_datetimes[:10]:
-  # Update trip['start'] and trip['end']
-  trip['start'] = trip['start'].replace(tzinfo=et)
-  trip['end'] = trip['end'].replace(tzinfo=et)
+    # Update trip['start'] and trip['end']
+    trip['start'] = trip['start'].replace(tzinfo=et)
+    trip['end'] = trip['end'].replace(tzinfo=et)
 
 # -------------------------------------------
 # What time did the bike leave? (Global edition)
@@ -320,7 +319,7 @@ import pandas as pd
 
 # Load CSV into the rides variable
 rides = pd.read_csv('capital-onebike.csv',
-                    parse_dates = ['Start date', 'End date'])
+                    parse_dates=['Start date', 'End date'])
 
 # Print the initial (0th) row
 print(rides.iloc[0])
@@ -346,11 +345,11 @@ joyrides = (rides['Start station'] == rides['End station'])
 print("{} rides were joyrides".format(joyrides.sum()))
 
 # Median of all rides
-print("The median duration overall was {:.2f} seconds"\
+print("The median duration overall was {:.2f} seconds" \
       .format(rides['Duration'].median()))
 
 # Median of joyrides
-print("The median duration for joyrides was {:.2f} seconds"\
+print("The median duration for joyrides was {:.2f} seconds" \
       .format(rides[joyrides]['Duration'].median()))
 
 # -------------------------------------------
@@ -359,22 +358,22 @@ print("The median duration for joyrides was {:.2f} seconds"\
 import matplotlib.pyplot as plt
 
 # Resample rides to daily(D), take the size, plot the results
-rides.resample('D', on = 'Start date')\
-  .size()\
-  .plot(ylim = [0, 15])
+rides.resample('D', on='Start date') \
+    .size() \
+    .plot(ylim=[0, 15])
 plt.show()
 
 # Resample rides to monthly, take the size, plot the results
-rides.resample('M', on = 'Start date')\
-  .size()\
-  .plot(ylim = [0, 150])
+rides.resample('M', on='Start date') \
+    .size() \
+    .plot(ylim=[0, 150])
 plt.show()
 
 # -------------------------------------------
 # Members vs casual riders over time
 
 # Resample rides to be monthly on the basis of Start date
-monthly_rides = rides.resample('M', on = 'Start date')['Member type']
+monthly_rides = rides.resample('M', on='Start date')['Member type']
 
 print(monthly_rides.head())
 
@@ -385,8 +384,8 @@ print(monthly_rides.value_counts() / monthly_rides.size())
 # Combining groupby() and resample()
 
 # Group rides by member type, and resample to the month
-grouped = rides.groupby('Member type')\
-  .resample('M', on = 'Start date')
+grouped = rides.groupby('Member type') \
+    .resample('M', on='Start date')
 
 # Print the median duration for each group
 print(grouped['Duration'].median())
@@ -425,9 +424,9 @@ rides['Time since'] = rides['Start date'] - (rides['End date'].shift(1))
 rides['Time since'] = rides['Time since'].dt.total_seconds()
 
 # Resample to the month
-monthly = rides.resample('M', on = 'Start date')
+monthly = rides.resample('M', on='Start date')
 
 # Print the average hours between rides each month
-print(monthly['Time since'].mean()/(60*60))
+print(monthly['Time since'].mean() / (60 * 60))
 
 # -------------------------------------------
