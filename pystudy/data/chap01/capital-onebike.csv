@@ -1,0 +1,291 @@
+start,end,start_station_no,start_station,end_station_no,end_station,bike_no,type
+2017-10-01 15:23,2017-10-01 15:26,31038,Glebe Rd & 11th St N,31036,George Mason Dr & Wilson Blvd,W20529,Member
+2017-10-01 15:42,2017-10-01 17:49,31036,George Mason Dr & Wilson Blvd,31036,George Mason Dr & Wilson Blvd,W20529,Casual
+2017-10-02 6:37,2017-10-02 6:42,31036,George Mason Dr & Wilson Blvd,31037,Ballston Metro / N Stuart & 9th St N,W20529,Member
+2017-10-02 8:56,2017-10-02 9:18,31037,Ballston Metro / N Stuart & 9th St N,31295,Potomac & M St NW,W20529,Member
+2017-10-02 18:23,2017-10-02 18:45,31295,Potomac & M St NW,31230,Metro Center / 12th & G St NW,W20529,Member
+2017-10-02 18:48,2017-10-02 19:10,31230,Metro Center / 12th & G St NW,31645,6th & K St NE,W20529,Member
+2017-10-02 19:18,2017-10-02 19:31,31645,6th & K St NE,31262,11th & F St NW,W20529,Member
+2017-10-02 19:37,2017-10-02 19:46,31262,11th & F St NW,31268,12th & U St NW,W20529,Member
+2017-10-03 8:24,2017-10-03 8:32,31268,12th & U St NW,31267,17th St & Massachusetts Ave NW,W20529,Member
+2017-10-03 18:17,2017-10-03 18:27,31303,Tenleytown / Wisconsin Ave & Albemarle St NW,31320,Nebraska Ave/AU East Campus,W20529,Member
+2017-10-03 19:24,2017-10-03 19:52,31320,Nebraska Ave/AU East Campus,31281,8th & O St NW,W20529,Member
+2017-10-03 20:17,2017-10-03 20:23,31281,8th & O St NW,31241,Thomas Circle,W20529,Casual
+2017-10-03 20:45,2017-10-03 20:57,31241,Thomas Circle,31636,New Jersey Ave & N St NW/Dunbar HS,W20529,Member
+2017-10-04 7:04,2017-10-04 7:13,31636,New Jersey Ave & N St NW/Dunbar HS,31623,Columbus Circle / Union Station,W20529,Member
+2017-10-04 7:13,2017-10-04 7:21,31623,Columbus Circle / Union Station,31272,Washington & Independence Ave SW/HHS,W20529,Member
+2017-10-04 14:22,2017-10-04 14:50,31272,Washington & Independence Ave SW/HHS,31247,Jefferson Dr & 14th St SW,W20529,Casual
+2017-10-04 15:07,2017-10-04 15:44,31247,Jefferson Dr & 14th St SW,31240,Ohio Dr & West Basin Dr SW / MLK & FDR Memorials,W20529,Casual
+2017-10-04 15:46,2017-10-04 16:32,31240,Ohio Dr & West Basin Dr SW / MLK & FDR Memorials,31277,17th & G St NW,W20529,Casual
+2017-10-04 16:34,2017-10-04 16:46,31277,17th & G St NW,31200,Massachusetts Ave & Dupont Circle NW,W20529,Casual
+2017-10-04 17:26,2017-10-04 17:31,31200,Massachusetts Ave & Dupont Circle NW,31241,Thomas Circle,W20529,Member
+2017-10-04 17:42,2017-10-04 17:50,31241,Thomas Circle,31278,18th & R St NW,W20529,Member
+2017-10-05 7:49,2017-10-05 8:12,31406,14th & Upshur St NW,31238,14th & G St NW,W20529,Member
+2017-10-05 8:26,2017-10-05 8:29,31238,14th & G St NW,31228,8th & H St NW,W20529,Member
+2017-10-05 8:33,2017-10-05 8:38,31228,8th & H St NW,31219,10th St & Constitution Ave NW,W20529,Member
+2017-10-05 16:35,2017-10-05 16:51,31219,10th St & Constitution Ave NW,31624,North Capitol St & F St NW,W20529,Member
+2017-10-05 17:53,2017-10-05 18:16,31624,North Capitol St & F St NW,31051,Arlington Blvd & N Queen St,W20529,Member
+2017-10-06 8:17,2017-10-06 8:38,31051,Arlington Blvd & N Queen St,31271,Constitution Ave & 2nd St NW/DOL,W20529,Member
+2017-10-06 11:39,2017-10-06 11:50,31271,Constitution Ave & 2nd St NW/DOL,31503,Florida Ave & R St NW,W20529,Member
+2017-10-06 12:59,2017-10-06 13:13,31503,Florida Ave & R St NW,31214,17th & Corcoran St NW,W20529,Member
+2017-10-06 13:43,2017-10-06 14:14,31214,17th & Corcoran St NW,31243,4th & C St SW,W20529,Member
+2017-10-06 14:28,2017-10-06 15:09,31243,4th & C St SW,31129,15th St & Pennsylvania Ave NW/Pershing Park,W20529,Casual
+2017-10-06 15:50,2017-10-06 16:12,31129,15th St & Pennsylvania Ave NW/Pershing Park,31129,15th St & Pennsylvania Ave NW/Pershing Park,W20529,Casual
+2017-10-06 16:32,2017-10-06 16:39,31129,15th St & Pennsylvania Ave NW/Pershing Park,31252,21st St & Pennsylvania Ave NW,W20529,Member
+2017-10-06 16:44,2017-10-06 16:48,31252,21st St & Pennsylvania Ave NW,31220,US Dept of State / Virginia Ave & 21st St NW,W20529,Member
+2017-10-06 16:53,2017-10-06 17:09,31220,US Dept of State / Virginia Ave & 21st St NW,31627,3rd & M St NE,W20529,Member
+2017-10-07 11:38,2017-10-07 11:53,31627,3rd & M St NE,31613,Eastern Market Metro / Pennsylvania Ave & 7th St SE,W20529,Member
+2017-10-07 14:03,2017-10-07 14:07,31613,Eastern Market Metro / Pennsylvania Ave & 7th St SE,31605,3rd & D St SE,W20529,Member
+2017-10-07 14:20,2017-10-07 14:27,31605,3rd & D St SE,31610,Eastern Market / 7th & North Carolina Ave SE,W20529,Casual
+2017-10-07 14:30,2017-10-07 14:44,31610,Eastern Market / 7th & North Carolina Ave SE,31108,4th & M St SW,W20529,Member
+2017-10-08 0:28,2017-10-08 0:30,31108,4th & M St SW,31609,Maine Ave & 7th St SW,W20529,Member
+2017-10-08 11:16,2017-10-08 11:33,31609,Maine Ave & 7th St SW,31239,Rhode Island & Connecticut Ave NW,W20529,Member
+2017-10-08 12:37,2017-10-08 13:01,31239,Rhode Island & Connecticut Ave NW,31290,17th St & Independence Ave SW,W20529,Casual
+2017-10-08 13:30,2017-10-08 13:57,31290,17th St & Independence Ave SW,31258,Lincoln Memorial,W20529,Casual
+2017-10-08 14:16,2017-10-08 15:07,31258,Lincoln Memorial,31277,17th & G St NW,W20529,Member
+2017-10-08 15:23,2017-10-08 15:50,31277,17th & G St NW,31613,Eastern Market Metro / Pennsylvania Ave & 7th St SE,W20529,Member
+2017-10-08 15:54,2017-10-08 16:17,31613,Eastern Market Metro / Pennsylvania Ave & 7th St SE,31603,1st & M St NE,W20529,Casual
+2017-10-08 16:28,2017-10-08 16:35,31603,1st & M St NE,31624,North Capitol St & F St NW,W20529,Member
+2017-10-08 23:08,2017-10-08 23:33,31624,North Capitol St & F St NW,31271,Constitution Ave & 2nd St NW/DOL,W20529,Member
+2017-10-08 23:34,2017-10-08 23:45,31271,Constitution Ave & 2nd St NW/DOL,31288,4th St & Madison Dr NW,W20529,Member
+2017-10-08 23:46,2017-10-09 0:10,31288,4th St & Madison Dr NW,31247,Jefferson Dr & 14th St SW,W20529,Member
+2017-10-09 0:12,2017-10-09 0:36,31247,Jefferson Dr & 14th St SW,31290,17th St & Independence Ave SW,W20529,Member
+2017-10-09 0:37,2017-10-09 0:53,31290,17th St & Independence Ave SW,31258,Lincoln Memorial,W20529,Member
+2017-10-09 1:23,2017-10-09 1:48,31258,Lincoln Memorial,31277,17th & G St NW,W20529,Member
+2017-10-09 1:49,2017-10-09 2:13,31277,17th & G St NW,31256,10th & E St NW,W20529,Member
+2017-10-09 2:14,2017-10-09 2:29,31256,10th & E St NW,31624,North Capitol St & F St NW,W20529,Member
+2017-10-09 13:04,2017-10-09 13:13,31114,18th St & Wyoming Ave NW,31212,21st & M St NW,W20529,Member
+2017-10-09 14:30,2017-10-09 14:38,31212,21st & M St NW,31116,California St & Florida Ave NW,W20529,Member
+2017-10-09 15:06,2017-10-09 15:11,31116,California St & Florida Ave NW,31104,Adams Mill & Columbia Rd NW,W20529,Member
+2017-10-09 16:43,2017-10-09 16:45,31104,Adams Mill & Columbia Rd NW,31112,Harvard St & Adams Mill Rd NW,W20529,Member
+2017-10-10 15:32,2017-10-10 15:51,31301,Ward Circle / American University,31307,3000 Connecticut Ave NW / National Zoo,W20529,Casual
+2017-10-10 16:47,2017-10-10 17:03,31307,3000 Connecticut Ave NW / National Zoo,31201,15th & P St NW,W20529,Member
+2017-10-10 17:51,2017-10-10 18:00,31201,15th & P St NW,31238,14th & G St NW,W20529,Member
+2017-10-10 18:08,2017-10-10 18:19,31238,14th & G St NW,31285,22nd & P ST NW,W20529,Member
+2017-10-10 19:09,2017-10-10 19:14,31285,22nd & P ST NW,31221,18th & M St NW,W20529,Member
+2017-10-10 19:17,2017-10-10 19:23,31221,18th & M St NW,31237,25th St & Pennsylvania Ave NW,W20529,Member
+2017-10-10 19:28,2017-10-10 19:44,31237,25th St & Pennsylvania Ave NW,31307,3000 Connecticut Ave NW / National Zoo,W20529,Member
+2017-10-10 19:55,2017-10-10 20:11,31307,3000 Connecticut Ave NW / National Zoo,31245,7th & R St NW / Shaw Library,W20529,Member
+2017-10-10 22:20,2017-10-10 22:33,31245,7th & R St NW / Shaw Library,31121,Calvert St & Woodley Pl NW,W20529,Member
+2017-10-11 4:40,2017-10-11 4:59,31121,Calvert St & Woodley Pl NW,31283,14th & L St NW,W20529,Casual
+2017-10-11 6:28,2017-10-11 6:40,31283,14th & L St NW,31264,6th St & Indiana Ave NW,W20529,Member
+2017-10-11 16:41,2017-10-11 17:01,31514,Hamlin & 7th St NE,31615,6th & H St NE,W20529,Member
+2017-10-12 8:08,2017-10-12 8:35,31615,6th & H St NE,31255,24th & N St NW,W20529,Member
+2017-10-12 8:47,2017-10-12 8:59,31255,24th & N St NW,31259,20th St & Virginia Ave NW,W20529,Member
+2017-10-12 13:13,2017-10-12 13:37,31275,New Hampshire Ave & 24th St NW,31503,Florida Ave & R St NW,W20529,Member
+2017-10-12 13:40,2017-10-12 13:48,31503,Florida Ave & R St NW,31101,14th & V St NW,W20529,Member
+2017-10-12 13:49,2017-10-12 13:53,31101,14th & V St NW,31201,15th & P St NW,W20529,Member
+2017-10-12 14:33,2017-10-12 14:39,31201,15th & P St NW,31101,14th & V St NW,W20529,Member
+2017-10-13 15:55,2017-10-13 15:59,31319,Wisconsin Ave & Brandywine St NW,31317,Wisconsin Ave & Ingomar St NW,W20529,Member
+2017-10-17 17:58,2017-10-17 18:01,31317,Wisconsin Ave & Ingomar St NW,31309,Fessenden St & Wisconsin Ave NW,W20529,Member
+2017-10-19 20:21,2017-10-19 20:29,31317,Wisconsin Ave & Ingomar St NW,31303,Tenleytown / Wisconsin Ave & Albemarle St NW,W20529,Member
+2017-10-19 21:11,2017-10-19 21:29,31303,Tenleytown / Wisconsin Ave & Albemarle St NW,31200,Massachusetts Ave & Dupont Circle NW,W20529,Member
+2017-10-19 21:30,2017-10-19 21:47,31200,Massachusetts Ave & Dupont Circle NW,31638,1st & H St NW,W20529,Member
+2017-10-19 21:47,2017-10-19 21:57,31638,1st & H St NW,31617,Bladensburg Rd & Benning Rd NE,W20529,Member
+2017-10-19 21:57,2017-10-19 22:09,31617,Bladensburg Rd & Benning Rd NE,31703,Minnesota Ave Metro/DOES,W20529,Member
+2017-10-21 12:24,2017-10-21 12:36,31703,Minnesota Ave Metro/DOES,31617,Bladensburg Rd & Benning Rd NE,W20529,Member
+2017-10-21 12:36,2017-10-21 12:42,31617,Bladensburg Rd & Benning Rd NE,31616,3rd & H St NE,W20529,Member
+2017-10-21 13:47,2017-10-22 11:09,31616,3rd & H St NE,31607,14th & D St SE,W20529,Member
+2017-10-22 13:28,2017-10-22 13:31,31607,14th & D St SE,31626,15th St & Massachusetts Ave SE,W20529,Member
+2017-10-22 13:47,2017-10-22 13:56,31626,15th St & Massachusetts Ave SE,31610,Eastern Market / 7th & North Carolina Ave SE,W20529,Member
+2017-10-22 14:26,2017-10-22 14:32,31618,4th & East Capitol St NE,31613,Eastern Market Metro / Pennsylvania Ave & 7th St SE,W20529,Member
+2017-10-22 14:54,2017-10-22 15:09,31613,Eastern Market Metro / Pennsylvania Ave & 7th St SE,31624,North Capitol St & F St NW,W20529,Member
+2017-10-22 16:40,2017-10-22 16:51,31624,North Capitol St & F St NW,31605,3rd & D St SE,W20529,Member
+2017-10-22 17:58,2017-10-22 18:28,31605,3rd & D St SE,31101,14th & V St NW,W20529,Casual
+2017-10-22 18:45,2017-10-22 18:50,31101,14th & V St NW,31120,10th & Florida Ave NW,W20529,Member
+2017-10-22 18:56,2017-10-22 19:11,31120,10th & Florida Ave NW,31603,1st & M St NE,W20529,Member
+2017-10-23 10:14,2017-10-23 10:35,31240,Ohio Dr & West Basin Dr SW / MLK & FDR Memorials,31258,Lincoln Memorial,W20529,Casual
+2017-10-23 11:29,2017-10-23 14:38,31258,Lincoln Memorial,31289,Henry Bacon Dr & Lincoln Memorial Circle NW,W20529,Casual
+2017-10-23 15:04,2017-10-23 15:32,31289,Henry Bacon Dr & Lincoln Memorial Circle NW,31240,Ohio Dr & West Basin Dr SW / MLK & FDR Memorials,W20529,Casual
+2017-10-23 15:33,2017-10-23 17:06,31240,Ohio Dr & West Basin Dr SW / MLK & FDR Memorials,31258,Lincoln Memorial,W20529,Casual
+2017-10-23 17:13,2017-10-23 19:31,31258,Lincoln Memorial,31258,Lincoln Memorial,W20529,Casual
+2017-10-23 19:55,2017-10-23 20:25,31258,Lincoln Memorial,31249,Jefferson Memorial,W20529,Casual
+2017-10-23 21:47,2017-10-23 22:18,31249,Jefferson Memorial,31258,Lincoln Memorial,W20529,Casual
+2017-10-23 22:34,2017-10-23 22:48,31258,Lincoln Memorial,31218,L'Enfant Plaza / 7th & C St SW,W20529,Casual
+2017-10-24 6:55,2017-10-24 7:02,31218,L'Enfant Plaza / 7th & C St SW,31284,18th & C St NW,W20529,Member
+2017-10-24 14:56,2017-10-24 15:03,31284,18th & C St NW,31633,Independence Ave & L'Enfant Plaza SW/DOE,W20529,Member
+2017-10-24 15:51,2017-10-24 15:59,31633,Independence Ave & L'Enfant Plaza SW/DOE,31623,Columbus Circle / Union Station,W20529,Member
+2017-10-24 16:31,2017-10-24 16:55,31623,Columbus Circle / Union Station,31805,Pennsylvania & Minnesota Ave SE,W20529,Casual
+2017-10-28 14:26,2017-10-28 14:32,31706,Fairfax Village,31701,Branch & Pennsylvania Ave SE,W20529,Casual
+2017-11-01 9:41,2017-11-01 9:52,31701,Branch & Pennsylvania Ave SE,31606,Potomac & Pennsylvania Ave SE,W20529,Member
+2017-11-01 20:16,2017-11-01 20:32,31606,Potomac & Pennsylvania Ave SE,31518,New York Ave & Hecht Ave NE,W20529,Member
+2017-11-02 19:44,2017-11-02 19:50,31287,10th St & L'Enfant Plaza SW,31238,14th & G St NW,W20529,Member
+2017-11-02 20:14,2017-11-02 20:30,31238,14th & G St NW,31627,3rd & M St NE,W20529,Member
+2017-11-02 21:35,2017-11-02 21:38,31627,3rd & M St NE,31505,Eckington Pl & Q St NE,W20529,Member
+2017-11-03 9:59,2017-11-03 10:11,31505,Eckington Pl & Q St NE,31265,5th St & Massachusetts Ave NW,W20529,Member
+2017-11-03 10:13,2017-11-03 10:32,31265,5th St & Massachusetts Ave NW,31260,23rd & E St NW ,W20529,Member
+2017-11-03 10:44,2017-11-03 10:50,31260,23rd & E St NW ,31100,19th St & Pennsylvania Ave NW,W20529,Member
+2017-11-03 16:06,2017-11-03 16:44,31246,M St & Pennsylvania Ave NW,31247,Jefferson Dr & 14th St SW,W20529,Casual
+2017-11-03 16:45,2017-11-03 17:00,31247,Jefferson Dr & 14th St SW,31258,Lincoln Memorial,W20529,Casual
+2017-11-03 17:07,2017-11-03 17:35,31258,Lincoln Memorial,31247,Jefferson Dr & 14th St SW,W20529,Member
+2017-11-03 17:36,2017-11-03 17:46,31247,Jefferson Dr & 14th St SW,31258,Lincoln Memorial,W20529,Casual
+2017-11-03 17:50,2017-11-03 18:00,31258,Lincoln Memorial,31248,Smithsonian-National Mall / Jefferson Dr & 12th St SW,W20529,Member
+2017-11-03 19:22,2017-11-03 19:45,31248,Smithsonian-National Mall / Jefferson Dr & 12th St SW,31203,14th & Rhode Island Ave NW,W20529,Member
+2017-11-04 13:14,2017-11-04 13:26,31203,14th & Rhode Island Ave NW,31503,Florida Ave & R St NW,W20529,Casual
+2017-11-04 14:18,2017-11-04 14:30,31503,Florida Ave & R St NW,31200,Massachusetts Ave & Dupont Circle NW,W20529,Member
+2017-11-04 14:45,2017-11-04 15:03,31200,Massachusetts Ave & Dupont Circle NW,31226,34th St & Wisconsin Ave NW,W20529,Member
+2017-11-04 15:16,2017-11-04 15:44,31226,34th St & Wisconsin Ave NW,31240,Ohio Dr & West Basin Dr SW / MLK & FDR Memorials,W20529,Casual
+2017-11-04 16:37,2017-11-04 16:58,31240,Ohio Dr & West Basin Dr SW / MLK & FDR Memorials,31249,Jefferson Memorial,W20529,Casual
+2017-11-04 17:13,2017-11-04 17:34,31249,Jefferson Memorial,31225,C & O Canal & Wisconsin Ave NW,W20529,Member
+2017-11-04 18:10,2017-11-04 18:58,31225,C & O Canal & Wisconsin Ave NW,31615,6th & H St NE,W20529,Member
+2017-11-05 1:56,2017-11-05 1:01,31615,6th & H St NE,31627,3rd & M St NE,W20529,Member
+2017-11-05 8:33,2017-11-05 8:53,31627,3rd & M St NE,31200,Massachusetts Ave & Dupont Circle NW,W20529,Casual
+2017-11-05 8:58,2017-11-05 9:03,31200,Massachusetts Ave & Dupont Circle NW,31205,21st & I St NW,W20529,Member
+2017-11-05 11:05,2017-11-05 11:30,31205,21st & I St NW,31262,11th & F St NW,W20529,Member
+2017-11-06 8:50,2017-11-06 8:59,31522,2nd St & Seaton Pl NE,31637,North Capitol St & G Pl NE,W20529,Member
+2017-11-06 9:04,2017-11-06 9:13,31637,North Capitol St & G Pl NE,31217,USDA / 12th & Independence Ave SW,W20529,Member
+2017-11-06 16:19,2017-11-06 17:02,31217,USDA / 12th & Independence Ave SW,31288,4th St & Madison Dr NW,W20529,Casual
+2017-11-06 17:21,2017-11-06 17:34,31288,4th St & Madison Dr NW,31290,17th St & Independence Ave SW,W20529,Casual
+2017-11-06 17:36,2017-11-06 17:57,31290,17th St & Independence Ave SW,31293,31st & Water St NW,W20529,Casual
+2017-11-06 17:59,2017-11-06 18:15,31293,31st & Water St NW,31236,37th & O St NW / Georgetown University,W20529,Casual
+2017-11-06 18:18,2017-11-06 18:21,31236,37th & O St NW / Georgetown University,31295,Potomac & M St NW,W20529,Member
+2017-11-06 19:24,2017-11-06 19:37,31295,Potomac & M St NW,31110,20th St & Florida Ave NW,W20529,Member
+2017-11-06 19:49,2017-11-06 20:03,31110,20th St & Florida Ave NW,31281,8th & O St NW,W20529,Casual
+2017-11-07 7:50,2017-11-07 8:01,31281,8th & O St NW,31239,Rhode Island & Connecticut Ave NW,W20529,Member
+2017-11-08 13:11,2017-11-08 13:18,31303,Tenleytown / Wisconsin Ave & Albemarle St NW,31301,Ward Circle / American University,W20529,Member
+2017-11-08 21:34,2017-11-08 21:46,31301,Ward Circle / American University,31305,Connecticut Ave & Newark St NW / Cleveland Park,W20529,Member
+2017-11-08 22:02,2017-11-08 22:04,31305,Connecticut Ave & Newark St NW / Cleveland Park,31307,3000 Connecticut Ave NW / National Zoo,W20529,Member
+2017-11-09 7:01,2017-11-09 7:12,31307,3000 Connecticut Ave NW / National Zoo,31110,20th St & Florida Ave NW,W20529,Member
+2017-11-09 8:02,2017-11-09 8:08,31110,20th St & Florida Ave NW,31255,24th & N St NW,W20529,Member
+2017-11-09 8:19,2017-11-09 8:32,31255,24th & N St NW,31104,Adams Mill & Columbia Rd NW,W20529,Member
+2017-11-09 8:41,2017-11-09 8:48,31104,Adams Mill & Columbia Rd NW,31234,20th & O St NW / Dupont South,W20529,Member
+2017-11-09 9:00,2017-11-09 9:09,31234,20th & O St NW / Dupont South,31202,14th & R St NW,W20529,Member
+2017-11-09 9:09,2017-11-09 9:24,31202,14th & R St NW,31624,North Capitol St & F St NW,W20529,Member
+2017-11-09 13:14,2017-11-09 13:25,31624,North Capitol St & F St NW,31505,Eckington Pl & Q St NE,W20529,Member
+2017-11-09 15:20,2017-11-09 15:31,31505,Eckington Pl & Q St NE,31111,10th & U St NW,W20529,Member
+2017-11-09 18:47,2017-11-09 18:53,31111,10th & U St NW,31203,14th & Rhode Island Ave NW,W20529,Member
+2017-11-09 23:35,2017-11-09 23:43,31203,14th & Rhode Island Ave NW,31506,1st & Rhode Island Ave NW,W20529,Member
+2017-11-10 7:51,2017-11-10 8:02,31506,1st & Rhode Island Ave NW,31216,14th St & New York Ave NW,W20529,Member
+2017-11-10 8:38,2017-11-10 8:42,31216,14th St & New York Ave NW,31277,17th & G St NW,W20529,Member
+2017-11-11 18:05,2017-11-11 18:13,31277,17th & G St NW,31203,14th & Rhode Island Ave NW,W20529,Member
+2017-11-11 19:39,2017-11-11 19:46,31203,14th & Rhode Island Ave NW,31278,18th & R St NW,W20529,Member
+2017-11-11 21:13,2017-11-11 21:16,31278,18th & R St NW,31229,New Hampshire Ave & T St NW,W20529,Member
+2017-11-12 9:46,2017-11-12 9:51,31229,New Hampshire Ave & T St NW,31213,17th & K St NW,W20529,Member
+2017-11-13 13:33,2017-11-13 13:54,31213,17th & K St NW,31624,North Capitol St & F St NW,W20529,Member
+2017-11-14 8:40,2017-11-14 8:55,31630,15th & East Capitol St NE,31243,4th & C St SW,W20529,Member
+2017-11-15 6:14,2017-11-15 6:30,31614,11th & H St NE,31628,1st & K St SE,W20529,Member
+2017-11-15 8:14,2017-11-15 8:23,31628,1st & K St SE,31244,4th & E St SW,W20529,Member
+2017-11-15 10:16,2017-11-15 10:33,31244,4th & E St SW,31266,11th & M St NW,W20529,Member
+2017-11-15 10:33,2017-11-15 10:54,31266,11th & M St NW,31268,12th & U St NW,W20529,Member
+2017-11-15 11:02,2017-11-15 11:14,31268,12th & U St NW,31231,14th & D St NW / Ronald Reagan Building,W20529,Member
+2017-11-16 9:27,2017-11-16 9:38,31123,14th & Girard St NW,31200,Massachusetts Ave & Dupont Circle NW,W20529,Member
+2017-11-16 9:57,2017-11-16 10:18,31200,Massachusetts Ave & Dupont Circle NW,31236,37th & O St NW / Georgetown University,W20529,Casual
+2017-11-16 17:25,2017-11-16 17:44,31236,37th & O St NW / Georgetown University,31112,Harvard St & Adams Mill Rd NW,W20529,Member
+2017-11-17 13:45,2017-11-17 16:36,31112,Harvard St & Adams Mill Rd NW,31296,Columbia & Ontario Rd NW,W20529,Casual
+2017-11-17 19:12,2017-11-17 19:31,31296,Columbia & Ontario Rd NW,31627,3rd & M St NE,W20529,Casual
+2017-11-18 10:49,2017-11-18 10:55,31627,3rd & M St NE,31505,Eckington Pl & Q St NE,W20529,Member
+2017-11-18 11:32,2017-11-18 11:44,31505,Eckington Pl & Q St NE,31228,8th & H St NW,W20529,Member
+2017-11-18 18:09,2017-11-18 18:14,31228,8th & H St NW,31251,12th & L St NW,W20529,Member
+2017-11-18 18:53,2017-11-18 19:01,31251,12th & L St NW,31232,7th & F St NW / National Portrait Gallery,W20529,Member
+2017-11-19 14:15,2017-11-19 14:31,31232,7th & F St NW / National Portrait Gallery,31200,Massachusetts Ave & Dupont Circle NW,W20529,Member
+2017-11-20 21:19,2017-11-20 21:41,31200,Massachusetts Ave & Dupont Circle NW,31259,20th St & Virginia Ave NW,W20529,Member
+2017-11-20 22:39,2017-11-20 23:23,31259,20th St & Virginia Ave NW,31259,20th St & Virginia Ave NW,W20529,Casual
+2017-11-21 17:44,2017-11-21 17:51,31259,20th St & Virginia Ave NW,31250,20th & L St NW,W20529,Member
+2017-11-21 18:20,2017-11-21 18:34,31250,20th & L St NW,31602,Park Rd & Holmead Pl NW,W20529,Member
+2017-11-21 18:47,2017-11-21 18:51,31602,Park Rd & Holmead Pl NW,31401,14th St & Spring Rd NW,W20529,Member
+2017-11-21 19:07,2017-11-21 19:14,31401,14th St & Spring Rd NW,31402,14th St Heights / 14th & Crittenden St NW,W20529,Member
+2017-11-21 20:04,2017-11-21 20:08,31402,14th St Heights / 14th & Crittenden St NW,31401,14th St & Spring Rd NW,W20529,Member
+2017-11-21 21:55,2017-11-21 22:08,31401,14th St & Spring Rd NW,31307,3000 Connecticut Ave NW / National Zoo,W20529,Member
+2017-11-23 23:47,2017-11-23 23:57,31307,3000 Connecticut Ave NW / National Zoo,31200,Massachusetts Ave & Dupont Circle NW,W20529,Casual
+2017-11-24 6:41,2017-11-24 6:53,31200,Massachusetts Ave & Dupont Circle NW,31229,New Hampshire Ave & T St NW,W20529,Member
+2017-11-24 6:58,2017-11-24 7:33,31229,New Hampshire Ave & T St NW,31226,34th St & Wisconsin Ave NW,W20529,Member
+2017-11-26 12:25,2017-11-26 12:41,31226,34th St & Wisconsin Ave NW,31225,C & O Canal & Wisconsin Ave NW,W20529,Casual
+2017-11-27 5:29,2017-11-27 5:54,31225,C & O Canal & Wisconsin Ave NW,31602,Park Rd & Holmead Pl NW,W20529,Member
+2017-11-27 6:06,2017-11-27 6:11,31602,Park Rd & Holmead Pl NW,31119,14th & Belmont St NW,W20529,Member
+2017-11-27 6:45,2017-11-27 6:55,31119,14th & Belmont St NW,31275,New Hampshire Ave & 24th St NW,W20529,Member
+2017-11-27 9:39,2017-11-27 9:47,31275,New Hampshire Ave & 24th St NW,31259,20th St & Virginia Ave NW,W20529,Member
+2017-11-27 11:09,2017-11-27 11:20,31259,20th St & Virginia Ave NW,31229,New Hampshire Ave & T St NW,W20529,Member
+2017-11-27 11:31,2017-11-27 11:35,31229,New Hampshire Ave & T St NW,31234,20th & O St NW / Dupont South,W20529,Member
+2017-11-27 12:07,2017-11-27 12:12,31234,20th & O St NW / Dupont South,31229,New Hampshire Ave & T St NW,W20529,Member
+2017-11-27 12:21,2017-11-27 12:26,31229,New Hampshire Ave & T St NW,31212,21st & M St NW,W20529,Member
+2017-11-27 17:26,2017-11-27 17:36,31212,21st & M St NW,31263,10th & K St NW,W20529,Member
+2017-11-27 18:11,2017-11-27 18:29,31263,10th & K St NW,31615,6th & H St NE,W20529,Member
+2017-11-27 19:36,2017-11-27 19:47,31615,6th & H St NE,31522,2nd St & Seaton Pl NE,W20529,Member
+2017-11-27 20:12,2017-11-27 20:17,31522,2nd St & Seaton Pl NE,31627,3rd & M St NE,W20529,Member
+2017-11-28 8:18,2017-11-28 8:41,31627,3rd & M St NE,31205,21st & I St NW,W20529,Member
+2017-11-28 19:17,2017-11-28 19:34,31205,21st & I St NW,31295,Potomac & M St NW,W20529,Member
+2017-11-28 19:34,2017-11-28 19:46,31295,Potomac & M St NW,31050,Barton St & 10th St N,W20529,Member
+2017-11-28 21:27,2017-11-28 21:39,31050,Barton St & 10th St N,31035,N Quincy St & Glebe Rd,W20529,Member
+2017-11-29 7:47,2017-11-29 7:51,31035,N Quincy St & Glebe Rd,31024,Virginia Square Metro / N Monroe St & 9th St N,W20529,Member
+2017-11-29 9:50,2017-11-29 9:53,31024,Virginia Square Metro / N Monroe St & 9th St N,31037,Ballston Metro / N Stuart & 9th St N,W20529,Member
+2017-11-29 17:03,2017-11-29 17:16,31037,Ballston Metro / N Stuart & 9th St N,31022,Clarendon Metro / Wilson Blvd & N Highland St,W20529,Member
+2017-11-29 18:19,2017-11-29 18:23,31022,Clarendon Metro / Wilson Blvd & N Highland St,31040,Fairfax Dr & Kenmore St,W20529,Member
+2017-12-01 17:03,2017-12-01 17:10,31040,Fairfax Dr & Kenmore St,31079,Lee Hwy & N Cleveland St,W20529,Member
+2017-12-02 7:55,2017-12-02 8:01,31079,Lee Hwy & N Cleveland St,31017,Wilson Blvd & N Uhle St,W20529,Member
+2017-12-02 9:16,2017-12-02 9:21,31017,Wilson Blvd & N Uhle St,31079,Lee Hwy & N Cleveland St,W20529,Member
+2017-12-02 19:48,2017-12-02 19:53,31079,Lee Hwy & N Cleveland St,31021,Clarendon Blvd & N Fillmore St,W20529,Member
+2017-12-03 14:36,2017-12-03 15:20,31021,Clarendon Blvd & N Fillmore St,31646,Maine Ave & 9th St SW,W20529,Casual
+2017-12-03 16:04,2017-12-03 16:25,31646,Maine Ave & 9th St SW,31264,6th St & Indiana Ave NW,W20529,Member
+2017-12-03 16:40,2017-12-03 16:43,31264,6th St & Indiana Ave NW,31265,5th St & Massachusetts Ave NW,W20529,Member
+2017-12-03 17:20,2017-12-03 18:04,31265,5th St & Massachusetts Ave NW,31265,5th St & Massachusetts Ave NW,W20529,Casual
+2017-12-04 8:34,2017-12-04 8:51,31265,5th St & Massachusetts Ave NW,31279,19th & G St NW,W20529,Member
+2017-12-04 17:49,2017-12-04 17:53,31279,19th & G St NW,31213,17th & K St NW,W20529,Member
+2017-12-04 18:38,2017-12-04 18:50,31213,17th & K St NW,31637,North Capitol St & G Pl NE,W20529,Member
+2017-12-04 21:39,2017-12-04 21:46,31637,North Capitol St & G Pl NE,31620,5th & F St NW,W20529,Casual
+2017-12-04 21:54,2017-12-04 21:56,31620,5th & F St NW,31264,6th St & Indiana Ave NW,W20529,Member
+2017-12-05 8:50,2017-12-05 8:52,31264,6th St & Indiana Ave NW,31621,4th & D St NW / Judiciary Square,W20529,Member
+2017-12-06 8:19,2017-12-06 8:24,31621,4th & D St NW / Judiciary Square,31272,Washington & Independence Ave SW/HHS,W20529,Member
+2017-12-06 18:19,2017-12-06 18:28,31272,Washington & Independence Ave SW/HHS,31623,Columbus Circle / Union Station,W20529,Member
+2017-12-06 18:28,2017-12-06 18:33,31623,Columbus Circle / Union Station,31627,3rd & M St NE,W20529,Member
+2017-12-06 20:03,2017-12-06 20:21,31627,3rd & M St NE,31244,4th & E St SW,W20529,Member
+2017-12-06 20:36,2017-12-06 20:39,31244,4th & E St SW,31108,4th & M St SW,W20529,Member
+2017-12-07 5:54,2017-12-07 6:01,31108,4th & M St SW,31634,3rd & Tingey St SE,W20529,Member
+2017-12-08 16:47,2017-12-08 16:55,31634,3rd & Tingey St SE,31609,Maine Ave & 7th St SW,W20529,Member
+2017-12-08 19:15,2017-12-08 19:29,31609,Maine Ave & 7th St SW,31608,8th & Eye St SE / Barracks Row,W20529,Casual
+2017-12-09 22:39,2017-12-09 22:47,31223,Convention Center / 7th & M St NW,31254,15th & K St NW,W20529,Member
+2017-12-09 23:00,2017-12-09 23:05,31254,15th & K St NW,31234,20th & O St NW / Dupont South,W20529,Member
+2017-12-10 0:39,2017-12-10 0:56,31234,20th & O St NW / Dupont South,31401,14th St & Spring Rd NW,W20529,Member
+2017-12-10 1:02,2017-12-10 1:08,31401,14th St & Spring Rd NW,31602,Park Rd & Holmead Pl NW,W20529,Member
+2017-12-10 1:08,2017-12-10 1:11,31602,Park Rd & Holmead Pl NW,31105,14th & Harvard St NW,W20529,Member
+2017-12-10 13:49,2017-12-10 13:51,31105,14th & Harvard St NW,31102,11th & Kenyon St NW,W20529,Casual
+2017-12-10 15:14,2017-12-10 15:18,31102,11th & Kenyon St NW,31123,14th & Girard St NW,W20529,Casual
+2017-12-10 15:31,2017-12-10 15:36,31123,14th & Girard St NW,31229,New Hampshire Ave & T St NW,W20529,Member
+2017-12-10 16:20,2017-12-10 16:30,31229,New Hampshire Ave & T St NW,31215,Georgetown Harbor / 30th St NW,W20529,Member
+2017-12-10 17:07,2017-12-10 17:14,31215,Georgetown Harbor / 30th St NW,31257,22nd & I St NW / Foggy Bottom,W20529,Member
+2017-12-10 17:23,2017-12-10 17:45,31257,22nd & I St NW / Foggy Bottom,31400,Georgia & New Hampshire Ave NW,W20529,Member
+2017-12-11 6:17,2017-12-11 6:34,31400,Georgia & New Hampshire Ave NW,31213,17th & K St NW,W20529,Member
+2017-12-11 9:08,2017-12-11 9:12,31213,17th & K St NW,31298,15th & M St NW,W20529,Member
+2017-12-11 9:15,2017-12-11 9:20,31298,15th & M St NW,31227,13th St & New York Ave NW,W20529,Member
+2017-12-12 8:55,2017-12-12 8:59,31514,Hamlin & 7th St NE,31516,Rhode Island Ave Metro,W20529,Member
+2017-12-13 17:14,2017-12-13 17:18,31516,Rhode Island Ave Metro,31500,4th & W St NE,W20529,Member
+2017-12-13 18:52,2017-12-13 19:00,31500,4th & W St NE,31245,7th & R St NW / Shaw Library,W20529,Member
+2017-12-14 9:01,2017-12-14 9:11,31245,7th & R St NW / Shaw Library,31267,17th St & Massachusetts Ave NW,W20529,Member
+2017-12-14 9:12,2017-12-14 9:19,31267,17th St & Massachusetts Ave NW,31283,14th & L St NW,W20529,Member
+2017-12-14 11:54,2017-12-14 12:02,31283,14th & L St NW,31275,New Hampshire Ave & 24th St NW,W20529,Member
+2017-12-14 14:40,2017-12-14 14:44,31275,New Hampshire Ave & 24th St NW,31246,M St & Pennsylvania Ave NW,W20529,Casual
+2017-12-14 15:08,2017-12-14 15:26,31246,M St & Pennsylvania Ave NW,31239,Rhode Island & Connecticut Ave NW,W20529,Member
+2017-12-14 17:46,2017-12-14 18:09,31239,Rhode Island & Connecticut Ave NW,31615,6th & H St NE,W20529,Member
+2017-12-15 9:08,2017-12-15 9:23,31615,6th & H St NE,31634,3rd & Tingey St SE,W20529,Member
+2017-12-16 9:33,2017-12-16 9:36,31634,3rd & Tingey St SE,31628,1st & K St SE,W20529,Member
+2017-12-16 11:02,2017-12-16 11:05,31628,1st & K St SE,31634,3rd & Tingey St SE,W20529,Member
+2017-12-17 10:09,2017-12-17 10:32,31634,3rd & Tingey St SE,31288,4th St & Madison Dr NW,W20529,Member
+2017-12-18 8:02,2017-12-18 8:07,31282,16th & R St NW,31276,15th & L St NW,W20529,Member
+2017-12-18 16:03,2017-12-18 16:09,31223,Convention Center / 7th & M St NW,31203,14th & Rhode Island Ave NW,W20529,Member
+2017-12-18 16:30,2017-12-18 16:53,31203,14th & Rhode Island Ave NW,31638,1st & H St NW,W20529,Member
+2017-12-18 19:18,2017-12-18 19:22,31638,1st & H St NW,31265,5th St & Massachusetts Ave NW,W20529,Member
+2017-12-18 20:14,2017-12-18 20:17,31265,5th St & Massachusetts Ave NW,31638,1st & H St NW,W20529,Member
+2017-12-19 19:14,2017-12-19 19:23,31638,1st & H St NW,31512,Neal St & Trinidad Ave NE,W20529,Member
+2017-12-19 19:39,2017-12-19 19:43,31512,Neal St & Trinidad Ave NE,31611,13th & H St NE,W20529,Member
+2017-12-20 8:05,2017-12-20 8:10,31611,13th & H St NE,31623,Columbus Circle / Union Station,W20529,Member
+2017-12-20 8:15,2017-12-20 8:29,31623,Columbus Circle / Union Station,31227,13th St & New York Ave NW,W20529,Member
+2017-12-20 8:33,2017-12-20 8:38,31227,13th St & New York Ave NW,31277,17th & G St NW,W20529,Member
+2017-12-20 13:43,2017-12-20 13:54,31400,Georgia & New Hampshire Ave NW,31296,Columbia & Ontario Rd NW,W20529,Member
+2017-12-20 18:57,2017-12-20 19:06,31296,Columbia & Ontario Rd NW,31401,14th St & Spring Rd NW,W20529,Member
+2017-12-21 7:21,2017-12-21 7:32,31401,14th St & Spring Rd NW,31286,11th & O St NW,W20529,Member
+2017-12-21 8:01,2017-12-21 8:06,31286,11th & O St NW,31230,Metro Center / 12th & G St NW,W20529,Member
+2017-12-21 13:20,2017-12-21 13:33,31230,Metro Center / 12th & G St NW,31616,3rd & H St NE,W20529,Member
+2017-12-21 15:26,2017-12-21 15:34,31616,3rd & H St NE,31228,8th & H St NW,W20529,Member
+2017-12-21 18:09,2017-12-21 18:38,31228,8th & H St NW,31225,C & O Canal & Wisconsin Ave NW,W20529,Member
+2017-12-22 16:14,2017-12-22 16:21,31225,C & O Canal & Wisconsin Ave NW,31014,Lynn & 19th St North,W20529,Member
+2017-12-22 16:29,2017-12-22 16:34,31014,Lynn & 19th St North,31077,Iwo Jima Memorial/N Meade & 14th St N,W20529,Member
+2017-12-25 12:49,2017-12-25 13:18,31077,Iwo Jima Memorial/N Meade & 14th St N,31247,Jefferson Dr & 14th St SW,W20529,Casual
+2017-12-25 13:46,2017-12-25 14:20,31247,Jefferson Dr & 14th St SW,31247,Jefferson Dr & 14th St SW,W20529,Casual
+2017-12-26 10:40,2017-12-26 10:53,31123,14th & Girard St NW,31603,1st & M St NE,W20529,Member
+2017-12-27 16:56,2017-12-27 17:17,31603,1st & M St NE,31101,14th & V St NW,W20529,Member
+2017-12-29 6:02,2017-12-29 6:12,31113,Columbia Rd & Belmont St NW,31298,15th & M St NW,W20529,Member
+2017-12-29 12:21,2017-12-29 12:46,31298,15th & M St NW,31242,18th St & Pennsylvania Ave NW,W20529,Casual
+2017-12-29 14:32,2017-12-29 14:43,31242,18th St & Pennsylvania Ave NW,31265,5th St & Massachusetts Ave NW,W20529,Member
+2017-12-29 15:08,2017-12-29 15:18,31265,5th St & Massachusetts Ave NW,31613,Eastern Market Metro / Pennsylvania Ave & 7th St SE,W20529,Casual
+2017-12-29 20:33,2017-12-29 20:38,31613,Eastern Market Metro / Pennsylvania Ave & 7th St SE,31618,4th & East Capitol St NE,W20529,Member
+2017-12-30 13:51,2017-12-30 13:54,31618,4th & East Capitol St NE,31610,Eastern Market / 7th & North Carolina Ave SE,W20529,Member
+2017-12-30 15:09,2017-12-30 15:19,31610,Eastern Market / 7th & North Carolina Ave SE,31272,Washington & Independence Ave SW/HHS,W20529,Member
