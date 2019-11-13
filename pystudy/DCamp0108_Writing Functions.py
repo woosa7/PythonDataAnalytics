@@ -1,5 +1,13 @@
+"""
+Writing Functions in Python
+
+First-class fuction
+함수 자체를 인자(argument)로써 다른 함수에 전달하거나 다른 함수의 결과값으로 리턴할 수도 있고, 함수를 변수에 할당하거나 데이터 구조안에 저장할 수 있다.
+"""
+import sys
+
 # -------------------------------------------
-# Crafting a docstring
+# docstring
 
 def count_letter(content, letter):
     """Count the number of times `letter` appears in `content`.
@@ -16,18 +24,16 @@ def count_letter(content, letter):
     """
     if (not isinstance(letter, str)) or len(letter) != 1:
         raise ValueError('`letter` must be a single character string.')
-    return len([char for char in content if char == letter])
 
+    return len([char for char in content if char == letter])
 
 # -------------------------------------------
 # Retrieving docstrings
 
 import inspect
 
-
 def build_tooltip(function):
-    """Create a tooltip for any function that shows the
-    function's docstring.
+    """Create a tooltip for any function that shows the function's docstring.
 
     Args:
       function (callable): The function we want a tooltip for.
@@ -42,12 +48,11 @@ def build_tooltip(function):
 
 
 print(build_tooltip(count_letter))
-print(build_tooltip(range))
-print(build_tooltip(print))
-
 
 # -------------------------------------------
 # Extract a function
+
+import pandas as pd
 
 def standardize(column):
     """Standardize the values in a column.
@@ -63,30 +68,17 @@ def standardize(column):
     return z_score
 
 
-# Use the standardize() function to calculate the z-scores
-df['y1_z'] = standardize(df.y1_gpa)
-df['y2_z'] = standardize(df.y2_gpa)
-df['y3_z'] = standardize(df.y3_gpa)
-df['y4_z'] = standardize(df.y4_gpa)
+# Use the standardize() function to calculate the z-score
+df = pd.read_csv('data/chap01/us_life_expectancy.csv')
 
+df['life_exp_z'] = standardize(df.life_expectancy)
+print(df.head())
 
 # -------------------------------------------
 # Best practice for default arguments
 
 # Use an immutable variable for the default argument
 def better_add_column(values, df=None):
-    """Add a column of `values` to a DataFrame `df`.
-    The column will be named "col_<n>" where "n" is
-    the numerical index of the column.
-
-    Args:
-      values (iterable): The values of the new column
-      df (DataFrame, optional): The DataFrame to update.
-        If no DataFrame is passed, one is created by default.
-
-    Returns:
-      DataFrame
-    """
     # Update the function to create a default DataFrame
     if df is None:
         df = pandas.DataFrame()
@@ -94,24 +86,25 @@ def better_add_column(values, df=None):
     df['col_{}'.format(len(df.columns))] = values
     return df
 
-
 # -------------------------------------------
 # Using context managers
 
 # Open "alice.txt" and assign the file to "file"
-with open('alice.txt') as file:
+with open('data/chap01/anna.txt') as file:
     text = file.read()
 
 n = 0
 for word in text.split():
-    if word.lower() in ['cat', 'cats']:
+    if word.lower() in ['love', 'loved']:
         n += 1
 
-print('Lewis Carroll uses the word "cat" {} times'.format(n))
-
+print('Anna Karenina uses the word `love` {} times'.format(n))
 
 # -------------------------------------------
 # Writing context managers
+
+import contextlib
+import time
 
 # Add a decorator that will make timer() a context manager
 @contextlib.contextmanager
@@ -132,7 +125,6 @@ with timer():
     print('This should take approximately 0.25 seconds')
     time.sleep(0.25)
 
-
 # -------------------------------------------
 # A read-only open() context manager
 
@@ -147,104 +139,39 @@ def open_read_only(filename):
       file object
     """
     read_only_file = open(filename, mode='r')
-    # Yield read_only_file so it can be assigned to my_file
     yield read_only_file
-    # Close read_only_file
     read_only_file.close()
 
 
-with open_read_only('my_file.txt') as my_file:
-    print(my_file.read())
-
-# -------------------------------------------
-# Building a command line data app
-
-# Add the missing function references to the function map
-function_map = {
-    'mean': mean,
-    'std': std,
-    'minimum': minimum,
-    'maximum': maximum
-}
-
-data = load_data()
-print(data)
-
-func_name = get_user_input()
-
-# Call the chosen function and pass "data" as an argument
-function_map[func_name](data)
-
-
-# -------------------------------------------
-# Returning functions for a math game
-
-def create_math_function(func_name):
-    if func_name == 'add':
-        def add(a, b):
-            return a + b
-
-        return add
-    elif func_name == 'subtract':
-        # Define the subtract() function
-        def subtract(a, b):
-            return a - b
-
-        return subtract
-    else:
-        print("I don't know that one")
-
-
-add = create_math_function('add')
-print('5 + 2 = {}'.format(add(5, 2)))
-
-subtract = create_math_function('subtract')
-print('5 - 2 = {}'.format(subtract(5, 2)))
+with open_read_only('data/chap01/anna.txt') as my_file:
+    scripts = my_file.read()
+    # print(scripts)
 
 # -------------------------------------------
 # Modifying variables outside local scope
+# Sometimes your functions will need to modify a variable that is outside of the local scope of that function.
 
+# 1
 call_count = 0
-
 
 def my_function():
     # Use a keyword that lets us update call_count
     global call_count
     call_count += 1
 
-    print("You've called my_function() {} times!".format(
-        call_count
-    ))
+    print("You've called my_function() {} times!".format(call_count))
 
 
-for _ in range(20):
+for _ in range(5):
     my_function()
 
 
-def read_files():
-    file_contents = None
-
-    def save_contents(filename):
-        # Add a keyword that lets us modify file_contents
-        nonlocal file_contents
-        if file_contents is None:
-            file_contents = []
-        with open(filename) as fin:
-            file_contents.append(fin.read())
-
-    for filename in ['1984.txt', 'MobyDick.txt', 'CatsEye.txt']:
-        save_contents(filename)
-
-    return file_contents
-
-
-print('\n'.join(read_files()))
-
+# 2
+import random
 
 def wait_until_done():
     def check_is_done():
-        # Add a keyword so that wait_until_done()
-        # doesn't run forever
+        # Add a keyword so that wait_until_done() doesn't run forever
         global done
         if random.random() < 0.1:
             done = True
@@ -258,8 +185,11 @@ wait_until_done()
 
 print('Work done? {}'.format(done))
 
-
 # -------------------------------------------
+"""
+Closure
+클로저는 일반 함수와는 다르게, 자신의 영역 밖에서 호출된 함수의 변수값과 레퍼런스를 복사하고 저장한 뒤, 이 캡처한 값들에 액세스할 수 있게 도와준다.
+"""
 # Closures
 
 def return_a_func(arg1, arg2):
@@ -271,10 +201,17 @@ def return_a_func(arg1, arg2):
 
 
 my_func = return_a_func(2, 17)
+print(my_func)
 
 # Show that my_func()'s closure is not None
 print(my_func.__closure__ is not None)
+print(len(my_func.__closure__) == 2)    # no. of variables in closure
 
+# Get the values of the variables in the closure
+closure_values = [
+    my_func.__closure__[i].cell_contents for i in range(2)
+]
+print(closure_values == [2, 17])
 
 # -------------------------------------------
 # Closures keep your values safe
@@ -282,7 +219,6 @@ print(my_func.__closure__ is not None)
 def my_special_function():
     print('You are running my_special_function()')
 
-
 def get_new_func(func):
     def call_func():
         func()
@@ -291,75 +227,45 @@ def get_new_func(func):
 
 
 new_func = get_new_func(my_special_function)
-
 
 # Redefine my_special_function() to just print "hello"
 def my_special_function():
     print("hello")
 
-
+# new_func는 클로저이기 때문에 이전의 원래 동작을 그대로 실행한다.
 new_func()
 
-
-# -------------------------------------------
-def my_special_function():
-    print('You are running my_special_function()')
-
-
-def get_new_func(func):
-    def call_func():
-        func()
-
-    return call_func
-
-
-new_func = get_new_func(my_special_function)
-
-# Delete my_special_function()
+# Delete my_special_function(). 이 함수를 삭제해도 저장된 클로저는 문제없이 동작한다.
 del (my_special_function)
 
 new_func()
 
-
 # -------------------------------------------
-def my_special_function():
-    print('You are running my_special_function()')
+"""
+Decorator : 클로저를 활용해 함수를 확장
+"""
+
+def double_args(func):
+    def wrapper(a, b):
+        return func(a * 2, b * 2)
+    return wrapper
 
 
-def get_new_func(func):
-    def call_func():
-        func()
-
-    return call_func
-
-
-# Overwrite `my_special_function` with the new function
-my_special_function = get_new_func(my_special_function)
-
-my_special_function()
-
-
-# -------------------------------------------
-# decorator
-
-def my_function(a, b, c):
-    print(a + b + c)
-
+# normal syntax
+def my_function(a, b):
+    print(a + b)
 
 # Decorate my_function() with the print_args() decorator
-my_function = print_args(my_function)
-
-my_function(1, 2, 3)
-
-
-# Decorate my_function() with the print_args() decorator
-@print_args
-def my_function(a, b, c):
-    print(a + b + c)
+my_function = double_args(my_function)
+my_function(1, 2)
 
 
-my_function(1, 2, 3)
+# Decorator syntax
+@double_args
+def my_function(a, b):
+    print(a + b)
 
+my_function(1, 2)
 
 # -------------------------------------------
 # Defining a decorator
@@ -371,7 +277,6 @@ def print_before_and_after(func):
         func(*args)
         print('After {}'.format(func.__name__))
 
-    # Return the nested function
     return wrapper
 
 
@@ -382,9 +287,11 @@ def multiply(a, b):
 
 multiply(5, 10)
 
-
+# -------------------------------------------
+# Real world examples
 # -------------------------------------------
 # Print the return type
+# decorating 하는 함수의 모든 호출에서 리턴되는 변수의 유형을 출력
 
 def print_return_type(func):
     # Define wrapper(), the decorated function
@@ -396,7 +303,6 @@ def print_return_type(func):
         ))
         return result
 
-    # Return the decorated function
     return wrapper
 
 
@@ -409,7 +315,6 @@ print(foo(42))
 print(foo([1, 2, 3]))
 print(foo({'a': 42}))
 
-
 # -------------------------------------------
 # Counter
 
@@ -420,7 +325,7 @@ def counter(func):
         return func(*args, **kwargs)
 
     wrapper.count = 0
-    # Return the new decorated function
+
     return wrapper
 
 
@@ -434,276 +339,5 @@ foo()
 foo()
 
 print('foo() was called {} times.'.format(foo.count))
-
-
-# -------------------------------------------
-# Preserving docstrings when decorating functions 1
-
-def add_hello(func):
-    def wrapper(*args, **kwargs):
-        print('Hello')
-        return func(*args, **kwargs)
-
-    return wrapper
-
-
-# Decorate print_sum() with the add_hello() decorator
-@add_hello
-def print_sum(a, b):
-    """Adds two numbers and prints the sum"""
-    print(a + b)
-
-
-print_sum(10, 20)
-print(print_sum.__doc__)
-
-
-# -------------------------------------------
-# 2
-
-def add_hello(func):
-    # Add a docstring to wrapper
-    def wrapper(*args, **kwargs):
-        """Print 'hello' and then call the decorated function."""
-        print('Hello')
-        return func(*args, **kwargs)
-
-    return wrapper
-
-
-@add_hello
-def print_sum(a, b):
-    """Adds two numbers and prints the sum"""
-    print(a + b)
-
-
-print_sum(10, 20)
-print(print_sum.__doc__)
-
-# -------------------------------------------
-# 3
-
-# Import the function you need to fix the problem
-from functools import wraps
-
-
-def add_hello(func):
-    def wrapper(*args, **kwargs):
-        """Print 'hello' and then call the decorated function."""
-        print('Hello')
-        return func(*args, **kwargs)
-
-    return wrapper
-
-
-@add_hello
-def print_sum(a, b):
-    """Adds two numbers and prints the sum"""
-    print(a + b)
-
-
-print_sum(10, 20)
-print(print_sum.__doc__)
-
-# -------------------------------------------
-# 4
-
-from functools import wraps
-
-
-def add_hello(func):
-    # Decorate wrapper() so that it keeps func()'s metadata
-    @wraps(func)
-    def wrapper(*args, **kwargs):
-        """Print 'hello' and then call the decorated function."""
-        print('Hello')
-        return func(*args, **kwargs)
-
-    return wrapper
-
-
-@add_hello
-def print_sum(a, b):
-    """Adds two numbers and prints the sum"""
-    print(a + b)
-
-
-print_sum(10, 20)
-print(print_sum.__doc__)
-
-
-# -------------------------------------------
-# Measuring decorator overhead
-
-@check_everything
-def duplicate(my_list):
-    """Return a new list that repeats the input twice"""
-    return my_list + my_list
-
-
-t_start = time.time()
-duplicated_list = duplicate(list(range(50)))
-t_end = time.time()
-decorated_time = t_end - t_start
-
-t_start = time.time()
-# Call the original function instead of the decorated one
-duplicated_list = duplicate.__wrapped__(list(range(50)))
-t_end = time.time()
-undecorated_time = t_end - t_start
-
-print('Decorated time: {:.5f}s'.format(decorated_time))
-print('Undecorated time: {:.5f}s'.format(undecorated_time))
-
-
-# -------------------------------------------
-# Decorators that take arguments
-
-# Make print_sum() run 10 times with the run_n_times() decorator
-@run_n_times(10)
-def print_sum(a, b):
-    print(a + b)
-
-
-print_sum(15, 20)
-
-# Use run_n_times() to create the run_five_times() decorator
-run_five_times = run_n_times(5)
-
-
-@run_five_times
-def print_sum(a, b):
-    print(a + b)
-
-
-print_sum(4, 100)
-
-# Modify the print() function to always run 20 times
-print = run_n_times(20)(print)
-
-print('What is happening?!?!')
-
-
-# -------------------------------------------
-# HTML Generator
-
-def html(open_tag, close_tag):
-    def decorator(func):
-        @wraps(func)
-        def wrapper(*args, **kwargs):
-            msg = func(*args, **kwargs)
-            return '{}{}{}'.format(open_tag, msg, close_tag)
-
-        # Return the decorated function
-        return wrapper
-
-    # Return the decorator
-    return decorator
-
-
-# Make hello() return bolded text
-@html('<b>', '</b>')
-def hello(name):
-    return 'Hello {}!'.format(name)
-
-
-print(hello('Alice'))
-
-
-# Make goodbye() return italicized text
-@html('<i>', '</i>')
-def goodbye(name):
-    return 'Goodbye {}.'.format(name)
-
-
-print(goodbye('Alice'))
-
-
-# Wrap the result of hello_goodbye() in <div> and </div>
-@html('<div>', '</div>')
-def hello_goodbye(name):
-    return '\n{}\n{}\n'.format(hello(name), goodbye(name))
-
-
-print(hello_goodbye('Alice'))
-
-
-# -------------------------------------------
-# Tag your functions
-
-def tag(*tags):
-    # Define a new decorator, named "decorator", to return
-    def decorator(func):
-        # Ensure the decorated function keeps its metadata
-        @wraps(func)
-        def wrapper(*args, **kwargs):
-            # Call the function being decorated and return the result
-            return func(*args, **kwargs)
-
-        wrapper.tags = tags
-        return wrapper
-
-    # Return the new decorator
-    return decorator
-
-
-@tag('test', 'this is a tag')
-def foo():
-    pass
-
-
-print(foo.tags)
-
-
-# -------------------------------------------
-# Check the return type
-
-def returns_dict(func):
-    # Complete the returns_dict() decorator
-    def wrapper(*args, **kwargs):
-        result = func(*args, **kwargs)
-        assert (type(result) == dict)
-        return result
-
-    return wrapper
-
-
-@returns_dict
-def foo(value):
-    return value
-
-
-try:
-    print(foo([1, 2, 3]))
-except AssertionError:
-    print('foo() did not return a dict!')
-
-
-# -------------------------------------------
-# 2
-
-def returns(return_type):
-    # Write a decorator that raises an AssertionError if the
-    # decorated function returns a value that is not return_type
-    def decorator(func):
-        def wrapper(*args, **kwargs):
-            result = func(*args, **kwargs)
-            assert (type(result) == return_type)
-            return result
-
-        return wrapper
-
-    return decorator
-
-
-@returns(dict)
-def foo(value):
-    return value
-
-
-try:
-    print(foo([1, 2, 3]))
-except AssertionError:
-    print('foo() did not return a dict!')
 
 # -------------------------------------------
