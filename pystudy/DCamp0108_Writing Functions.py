@@ -80,7 +80,7 @@ print(df.head())
 def better_add_column(values, df=None):
     # Update the function to create a default DataFrame
     if df is None:
-        df = pandas.DataFrame()
+        df = pd.DataFrame()
 
     df['col_{}'.format(len(df.columns))] = values
     return df
