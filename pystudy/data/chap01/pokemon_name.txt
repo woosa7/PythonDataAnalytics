@@ -186,7 +186,7 @@ Excadrill
 Exeggcute
 Exeggutor
 Exploud
-"Farfetch'd",
+Farfetch
 Fearow
 Feebas
 Fennekin
