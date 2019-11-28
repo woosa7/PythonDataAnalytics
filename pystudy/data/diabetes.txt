@@ -1,0 +1,9 @@
+diabetes.txt
+
+Number of Instances: 442
+
+Number of Attributes: First 10 columns are numeric predictive values
+
+Target: Column 11 is a quantitative measure of diabetes disease progression one year after baseline.
+
+50 columns.
