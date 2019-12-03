@@ -24,8 +24,8 @@ plt.show()
 # Specifying Data Types
 
 # Create dict specifying data types for agi_stub and zipcode
-data_types = {'agi_stub':'category',
-			  'zipcode':str}
+data_types = {'agi_stub': 'category',
+              'zipcode': str}
 
 data = pd.read_csv("data/chap02/vt_tax_data_2016.csv", dtype=data_types)
 
@@ -35,9 +35,9 @@ print(data.dtypes.head())
 # Missing data
 
 # specifying that 0 in zipcode are NA values (0 --> NA)
-null_values = {'zipcode':0}
+null_values = {'zipcode': 0}
 
-data = pd.read_csv("data/chap02/vt_tax_data_2016.csv", na_values = null_values)
+data = pd.read_csv("data/chap02/vt_tax_data_2016.csv", na_values=null_values)
 
 print(data[data.zipcode.isna()])
 
@@ -47,14 +47,13 @@ print(data[data.zipcode.isna()])
 try:
     # Set warn_bad_lines to issue warnings about bad records
     data = pd.read_csv("data/chap02/vt_tax_data_2016_corrupt.csv",
-                        error_bad_lines=False,
-                        warn_bad_lines=True)
+                       error_bad_lines=False,
+                       warn_bad_lines=True)
 
     print(data.head())
 
 except:
     print("Your data contained rows that could not be parsed.")
-
 
 # -----------------------------------------------------------------
 # 2. Importing Data from Excel Files
@@ -129,7 +128,7 @@ print(survey_data.isna().sum())
 
 # Set dtype to load appropriate column(s) as Boolean data
 survey_data = pd.read_excel("data/chap02/fcc_survey_subset.xlsx",
-                            dtype={'HasDebt':bool})
+                            dtype={'HasDebt': bool})
 
 # View financial burdens by Boolean group
 print(survey_data.groupby('HasDebt').sum())
@@ -157,7 +156,6 @@ survey_data = pd.read_excel("data/chap02/fcc_survey.xlsx",
 # Parse non-standard date formats
 
 survey_data["Part2EndTime"] = pd.to_datetime(survey_data["Part2EndTime"], format="%Y%m%d %H:%M:%S")
-
 
 # -----------------------------------------------------------------
 # 3. Importing Data from Database
@@ -299,7 +297,6 @@ leak_calls = pd.read_sql(query, engine)
 
 print(leak_calls.head())
 
-
 # -----------------------------------------------------------------
 # 4. Importing JSON Data and Working with APIs
 # -----------------------------------------------------------------
@@ -309,9 +306,8 @@ import json
 
 # string
 with open('data/chap02/dhs_daily_report.json') as json_data:
-	jsonString = json.load(json_data)
-	print(jsonString)
-
+    jsonString = json.load(json_data)
+    print(jsonString)
 
 # DataFrame
 # The New York City Department of Homeless Services Daily Report
@@ -325,7 +321,7 @@ print(pop_in_shelters.info())
 
 try:
     df = pd.read_json("data/chap02/dhs_report_splitted.json",
-					  orient="split")
+                      orient="split")
 
     # Plot total population in shelters over time
     df["date_of_census"] = pd.to_datetime(df["date_of_census"])
@@ -336,14 +332,14 @@ try:
 except ValueError:
     print("pandas could not parse the JSON.")
 
-
 # -----------------------------------------------------------------
 # Yelp Business Search API
 import requests
 
 # need the API Key
 api_url = "https://api.yelp.com/v3/businesses/search"
-headers = {'Authorization': 'Bearer mhmt6jn3SFPVC1u6pfwgHWQvsa1wmWvCpKRtFGRYlo4mzA14SisQiDjyygsGMV2Dm7tEsuwdC4TYSA0Ai_GQTjKf9d5s5XLSNfQqdg1oy7jcBBh1i7iQUZBujdA_XHYx'}
+headers = {
+    'Authorization': 'Bearer mhmt6jn3SFPVC1u6pfwgHWQvsa1wmWvCpKRtFGRYlo4mzA14SisQiDjyygsGMV2Dm7tEsuwdC4TYSA0Ai_GQTjKf9d5s5XLSNfQqdg1oy7jcBBh1i7iQUZBujdA_XHYx'}
 params = {'term': 'cafe', 'location': 'NYC'}
 
 # Get data about NYC cafes from the Yelp API

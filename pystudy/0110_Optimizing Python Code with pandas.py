@@ -32,7 +32,7 @@ print("Time using .iloc[]: {} sec".format(iloc_end_time - iloc_start_time))
 
 # Use .iloc to select the first 6 columns and record the times before and after
 iloc_start_time = time.time()
-cols = poker_hands.iloc[:,0:6]
+cols = poker_hands.iloc[:, 0:6]
 iloc_end_time = time.time()
 
 # Print the time it took
@@ -40,7 +40,7 @@ print("Time using .iloc[] : {} sec".format(iloc_end_time - iloc_start_time))
 
 # Use simple column selection to select the first 6 columns
 names_start_time = time.time()
-cols = poker_hands[['S1','R1','S2','R2','S3','R3']]
+cols = poker_hands[['S1', 'R1', 'S2', 'R2', 'S3', 'R3']]
 names_end_time = time.time()
 
 # Print the time it took
@@ -52,7 +52,7 @@ print("Time using selection by name : {} sec".format(names_end_time - names_star
 # Random row selection
 
 # Extract number of rows in dataset
-N=poker_hands.shape[0]
+N = poker_hands.shape[0]
 
 # Select and time the selection of the 75% of the dataset's rows
 rand_start_time = time.time()
@@ -61,7 +61,7 @@ print("Time using Numpy: {} sec".format(time.time() - rand_start_time))
 
 # Select and time the selection of the 75% of the dataset's rows using sample()
 samp_start_time = time.time()
-poker_hands.sample(int(0.75 * N), axis=0, replace = True)
+poker_hands.sample(int(0.75 * N), axis=0, replace=True)
 print("Time using .sample: {} sec".format(time.time() - samp_start_time))
 
 # sample() is more efficient
@@ -90,37 +90,36 @@ names['Ethnicity'].loc[(names["Ethnicity"] == 'BLACK NON HISP') |
 
 # efficient way
 # Replace all non-Hispanic ethnicities with 'NON HISPANIC'
-names['Ethnicity'].replace(['BLACK NON HISP','BLACK NON HISPANIC','WHITE NON HISP','WHITE NON HISPANIC'],
+names['Ethnicity'].replace(['BLACK NON HISP', 'BLACK NON HISPANIC', 'WHITE NON HISP', 'WHITE NON HISPANIC'],
                            'NON HISPANIC', inplace=True)
 
 # -----------------------------------------------------------------
 # Replace multiple values using list to list
 
-names['Ethnicity'].replace(['ASIAN AND PACI','BLACK NON HISP','WHITE NON HISP'],
-                           ['ASIAN AND PACIFIC ISLANDER','BLACK NON HISPANIC','WHITE NON HISPANIC'],
+names['Ethnicity'].replace(['ASIAN AND PACI', 'BLACK NON HISP', 'WHITE NON HISP'],
+                           ['ASIAN AND PACIFIC ISLANDER', 'BLACK NON HISPANIC', 'WHITE NON HISPANIC'],
                            inplace=True)
 
 # -----------------------------------------------------------------
 # Replace values using dictionaries
 
 # Replace string to string
-poker_hands['Explanation'].replace({'Royal flush':'Flush', 'Straight flush':'Flush'}, inplace=True)
+poker_hands['Explanation'].replace({'Royal flush': 'Flush', 'Straight flush': 'Flush'}, inplace=True)
 print(poker_hands['Explanation'].head())
 
 # Replace the number by a string
-names['Rank'].replace({1:'FIRST', 2:'SECOND', 3:'THIRD'}, inplace=True)
+names['Rank'].replace({1: 'FIRST', 2: 'SECOND', 3: 'THIRD'}, inplace=True)
 print(names.head())
 
 # -----------------------------------------------------------------
 # Replace multiple values with just one value
 
 # Replace the rank of the first three ranked names to 'MEDAL'
-names.replace({'Rank': {1:'MEDAL', 2:'MEDAL', 3:'MEDAL'}}, inplace=True)
+names.replace({'Rank': {1: 'MEDAL', 2: 'MEDAL', 3: 'MEDAL'}}, inplace=True)
 
 # Replace the rank of the 4th and 5th ranked names to 'ALMOST MEDAL'
-names.replace({'Rank': {4:'ALMOST MEDAL', 5:'ALMOST MEDAL'}}, inplace=True)
+names.replace({'Rank': {4: 'ALMOST MEDAL', 5: 'ALMOST MEDAL'}}, inplace=True)
 print(names.head())
-
 
 # -----------------------------------------------------------------
 # 3. Efficient iterating
@@ -128,16 +127,16 @@ print(names.head())
 # iterrows()
 
 for index, values in poker_hands.iterrows():
-  	# Check if index is odd
-    if index%2 == 1:
-      	# Sum the ranks of all the cards
+    # Check if index is odd
+    if index % 2 == 1:
+        # Sum the ranks of all the cards
         hand_sum = sum([values[1], values[3], values[5], values[7], values[9]])
 
 # -----------------------------------------------------------------
 # apply() in every cell
 
 # Define the lambda transformation
-get_square = lambda x: x**2
+get_square = lambda x: x ** 2
 
 # Apply the transformation
 data_sum = poker_hands.apply(get_square)
@@ -180,13 +179,11 @@ poker_var = poker_hands[['R1', 'R2', 'R3', 'R4', 'R5']].var(axis=1)
 print("Time using pandas vectorization: {} sec".format(time.time() - start_time))
 print(poker_var.head())
 
-
 # Calculate the variance in each hand
 start_time = time.time()
 poker_var = poker_hands[['R1', 'R2', 'R3', 'R4', 'R5']].values.var(axis=1, ddof=1)
 print("Time using NumPy vectorization: {} sec".format(time.time() - start_time))
 print(poker_var[0:5])
-
 
 # -----------------------------------------------------------------
 # 4. Data manipulation using groupby()
@@ -209,7 +206,7 @@ print(restaurant_min_max_group.head())
 # λ (lambda) is the mean of the group that the observation x belongs to.
 
 # Define the exponential transformation
-exp_tr = lambda x: np.exp(-x.mean()*x) * x.mean()
+exp_tr = lambda x: np.exp(-x.mean() * x) * x.mean()
 
 # Group the data according to the time
 restaurant_grouped = restaurant_data.groupby('time')
@@ -271,7 +268,7 @@ print('Number of tables where total_bill is greater than $40:', total_bill_40.sh
 
 # the mean amount of money the customers paid
 # Select only the entries that have a mean total_bill greater than $20
-total_bill_20 = total_bill_40.groupby('day').filter(lambda x : x['total_bill'].mean() > 20)
+total_bill_20 = total_bill_40.groupby('day').filter(lambda x: x['total_bill'].mean() > 20)
 
 # Print days of the week that have a mean total_bill greater than $20
 print('Days of the week that have a mean total_bill greater than $20:', total_bill_20.day.unique())
