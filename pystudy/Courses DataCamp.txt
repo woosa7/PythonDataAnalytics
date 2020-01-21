@@ -1,0 +1,155 @@
+DataCamp : Python - 2020. 1. 2.
+
+------------------------------------------
+1. Programming
+------------------------------------------
+
+01. Introduction to Python
+02. Intermediate Python
+03. Python Data Science Toolbox 1
+04. Python Data Science Toolbox 2
+05. Data Types for Data Science
+06. Working with Dates and Times
+07. Object-Oriented Programming in Python
+08. Writing Functions in Python
+09. Writing Efficient Python Code
+10. Optimizing Python Code with pandas
+11. Command Line Automation in Python (skip)
+12. Software Engineering for Data Scientists
+13. Unit Testing for Data Science (skip)
+14. Creating Robust Python Workflows
+15. Preparing for Coding Interview Questions
+
+------------------------------------------
+2. Importing & Cleaning Data
+------------------------------------------
+
+01. Importing Data in Python 1
+02. Importing Data in Python 2
+03. Cleaning Data
+04. Streamlined Data Ingestion with pandas
+05. Web Scraping in Python (skip)
+
+------------------------------------------
+3. Data Manipulation
+------------------------------------------
+
+01. pandas Foundations
+02. Manipulating DataFrames with pandas
+03. Merging DataFrames with pandas
+04. Manipulating Time Series Data
+05. Dealing with Missing Data
+06. Regular Expressions
+
+07. Analyzing Police Activity with pandas
+08. Analyzing Social Media Data
+09. Biomedical Image Analysis
+10. Analyzing IoT Data
+11. Working with Geospatial Data
+12. Spoken Language Processing
+13. Parallel Computing with Dask
+
+: Ignore
+Introduction to Database
+Introduction to MongoDB
+Introduction to Spark SQL
+Feature Engineering wih PySpark
+Pandas Joins fro Spreadsheet Users
+
+------------------------------------------
+4. Data Visualization
+------------------------------------------
+
+01. Introduction to Data Visualization
+02. Improving Data Visualizations
+03. Introduction to Seaborn
+04. Data Visualization with Seaborn
+05. Visualizing Time Series Data
+06. Interactive Data Visualization with Bokeh
+07. Visualizing Geospatial Data
+
+------------------------------------------
+5. Probability & Statistics
+------------------------------------------
+
+01. Statistical Thinking 1
+02. Statistical Thinking 2
+03. Foundations of Probability
+04. Preparing for Statistics Interview Questions
+05. Case Studies in Statistical Thinking
+06. Statistical Simulation
+07. Experimental Design
+08. Customer Analytics & A/B Testing
+09. Introduction to Linear Modeling
+10. Generalized Linear Models
+11. Introduction to Time Series Analysis
+12. Network Analysis in Python (Part 1)
+13. Network Analysis in Python (Part 2)
+
+------------------------------------------
+6. Machine Learning
+------------------------------------------
+
+00. Preparing for Machine Learning Interview Questions
+01. Fundamentals of AI
+02. Preprocessing for Machine Learning
+03. Feature Engineering for Machine Learning
+04. Designing Machine Learning Workflows
+05. Deep Learning in Python
+06. Foundations of Predictive Analytics 1
+07. Foundations of Predictive Analytics 2
+08. Supervised Learning with scikit-learn
+09. Unsupervised Learning
+10. Linear Classifiers
+11. Machine Learning with Tree-Based Models
+12. Model Validation
+13. Hyperparameter Tuning
+14. Ensemble Methods
+15. Dimensionality Reduction
+16. Clustering Methods with SciPy
+17. Extreme Gradient Boosting with XGBoost
+18. Image Processing
+19. Convolutional Neural Networks for Image Processing
+20. Introduction to TensorFlow
+21. Deep Learning with Keras
+22. Advanced Deep Learning with Keras
+23. Introduction to Deep Learning with PyTorch
+24. Natural Language Processing Fundamentals
+25. Recurrent Neural Networks for Language Modeling
+26. Feature Engineering for NLP
+27. Sentiment Analysis
+28. Advanced NLP with spaCy
+29. Building Chatbots
+30. Machine Learning for Time Series Data
+31. Forecasting Using ARIMA Models
+32. Machine Learning for Finance
+33. Machine Learning for Marketing
+34. Customer Segmentation
+35. Supply Chain Analytics
+36. Fraud Detection
+37. HR Analytics in Python: Predicting Employee Churn
+38. Winning a Kaggle Competition
+
+------------------------------------------
+7. Applied Finance
+------------------------------------------
+
+01. Intro to Python for Finance
+02. Intro to Financial Concepts using Python
+03. Importing & Managing Financial Data
+04. Intro to Portfolio Analysis
+05. Intro to Portfolio Risk Management
+06. Credit Risk Modeling
+07. Financial Forecasting
+
+------------------------------------------
+8. Case Study
+------------------------------------------
+
+01. Exploratory Data Analysis
+02. Analyzing US Census Data
+03. Analyzing Marketing Campaigns
+04. Machine Learning with School Budgets
+05. Predicting Customer Churn
+
+---------------------------------------------------------------------------
